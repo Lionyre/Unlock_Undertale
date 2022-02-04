@@ -10,7 +10,10 @@ public class MovingHeart : MonoBehaviour
     private Button MoveLeft;
     private Button MoveRight;
 
-    private bool IsOnClick;
+    public bool IsOnClickUp;
+    public bool IsOnClickDown;
+    public bool IsOnClickLeft;
+    public bool IsOnClickRight;
 
     private void Start() {
         MoveUp = GameObject.Find("UpButton").GetComponent<Button>();
@@ -19,31 +22,48 @@ public class MovingHeart : MonoBehaviour
         MoveRight = GameObject.Find("RightButton").GetComponent<Button>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(IsOnClick == true)
-        {
-            Debug.Log("JE CLIIIIIQUE");
-        }
-        else if(IsOnClick == false)
-        {
-            Debug.Log("fini");
-        }
-    }
-
     public void MouvementPerso()
     {
         Debug.Log("JE CLIIIIIQUE");
     }
 
-    public void CheckIfDown()
+    public void ClickUp()
     {
-        IsOnClick = true;
+        IsOnClickUp = true;
     } 
 
-    public void CheckIfClickUp()
+    public void ReleaseUp()
     {
-        IsOnClick = false;
+        IsOnClickUp = false;
+    }
+
+    public void ClickDown()
+    {
+        IsOnClickDown = true;
+    } 
+
+    public void ReleaseDown()
+    {
+        IsOnClickDown = false;
+    }
+
+    public void ClickRight()
+    {
+        IsOnClickRight = true;
+    } 
+
+    public void ReleaseRight()
+    {
+        IsOnClickRight = false;
+    }
+
+    public void ClickLeft()
+    {
+        IsOnClickLeft = true;
+    } 
+
+    public void ReleaseLeft()
+    {
+        IsOnClickLeft = false;
     }
 }
