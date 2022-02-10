@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Move : MonoBehaviour
+public class AdamMove : MonoBehaviour
 {
     [SerializeField] Transform _player = null;
     [SerializeField] Slider _clickCounter;
