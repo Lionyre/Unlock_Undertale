@@ -17,22 +17,16 @@ public class Move : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.UpArrow))
         {
-            if(player.stopUp == false && player.stopAll == false){
+            if(player.stopUp == false && player.stopAll == false && !Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow)){
                 transform.position += transform.up * player.speed *Time.deltaTime;
-                if(!Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow))
-                {
-                    walkn.Play("up");
-                }
+                walkn.Play("up");
             }
         }
         if(Input.GetKey(KeyCode.DownArrow))
         {
-            if(player.stopDown == false && player.stopAll == false){
+            if(player.stopDown == false && player.stopAll == false && !Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow)){
                 transform.position -= transform.up * player.speed *Time.deltaTime;
-                if(!Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow))
-                {
-                    walkn.Play("down");
-                }
+                walkn.Play("down");
             }
         }
         if(Input.GetKey(KeyCode.RightArrow))
