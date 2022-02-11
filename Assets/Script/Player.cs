@@ -10,5 +10,6 @@ public class Player : MonoBehaviour
     public bool stopDown = false;
     public bool stopLeft = false;
     public bool stopRight = false;
+    public bool stopAll = false;
     public GameObject Hitboxes => hitboxes;
 }
