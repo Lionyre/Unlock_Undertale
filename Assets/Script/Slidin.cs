@@ -8,6 +8,7 @@ public class Slidin : MonoBehaviour
     private Animator direction;
 
     private void OnTriggerEnter2D(Collider2D other) {
+        Debug.Log("sdfsdfd");
         if (other.gameObject.layer == 0 && other.gameObject.name == "Player")
         {
             player.orange = false;
