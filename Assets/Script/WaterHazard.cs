@@ -5,7 +5,6 @@ using UnityEngine;
 public class WaterHazard : MonoBehaviour
 {
     [SerializeField] private Player player = null;
-    public bool electrique = false;
     private Animator direction;
     // Start is called before the first frame update
     void Start()
@@ -13,26 +12,35 @@ public class WaterHazard : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other) {
-        if (other.gameObject.layer == 4 && other.gameObject.name == "Player" && (player.orange == true || electrique == true))
+    private void OnTriggerStay2D(Collider2D other) {
+        Debug.Log(1);
+        if (other.gameObject.layer == 0 && other.gameObject.name == "Player")
         {
+            Debug.Log(2);
             direction = other.gameObject.GetComponent<Animator>();
             if(direction.GetCurrentAnimatorStateInfo(0).IsName("up"))
             {
-
+                player.transform.position -= transform.up * player.speed *Time.deltaTime;
             }
             if(direction.GetCurrentAnimatorStateInfo(0).IsName("down"))
             {
-
+                player.transform.position += transform.up * player.speed *Time.deltaTime;
             }
             if(direction.GetCurrentAnimatorStateInfo(0).IsName("right"))
             {
-
+                player.transform.position -= transform.right * player.speed *Time.deltaTime;
             }
             if(direction.GetCurrentAnimatorStateInfo(0).IsName("left"))
             {
-
+                player.transform.position += transform.right * player.speed *Time.deltaTime;
             }
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other) {
+        if (other.gameObject.layer == 0 && other.gameObject.name == "Player")
+        {
+            player.stopAll = false;
+            this.gameObject.SetActive(false);
         }
     }
 
