@@ -5,8 +5,6 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     [SerializeField] private Player player = null;
-    private Vector3 str8Movin;
-    private float speed = 3;
     public Animator walkn;
 
     void Start()
@@ -20,7 +18,7 @@ public class Move : MonoBehaviour
         if(Input.GetKey(KeyCode.UpArrow))
         {
             if(player.stopUp == false && player.stopAll == false){
-                transform.position += transform.up * speed *Time.deltaTime;
+                transform.position += transform.up * player.speed *Time.deltaTime;
             }
             if(!Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow))
             {
@@ -30,7 +28,7 @@ public class Move : MonoBehaviour
         if(Input.GetKey(KeyCode.DownArrow))
         {
             if(player.stopDown == false && player.stopAll == false){
-                transform.position -= transform.up * speed *Time.deltaTime;
+                transform.position -= transform.up * player.speed *Time.deltaTime;
             }
             if(!Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow))
             {
@@ -40,14 +38,14 @@ public class Move : MonoBehaviour
         if(Input.GetKey(KeyCode.RightArrow))
         {
             if(player.stopRight == false && player.stopAll == false){
-                transform.position += transform.right * speed *Time.deltaTime;
+                transform.position += transform.right * player.speed *Time.deltaTime;
             }
             walkn.Play("right");
         }
         if(Input.GetKey(KeyCode.LeftArrow))
         {
             if(player.stopLeft == false && player.stopAll == false){
-                transform.position -= transform.right * speed *Time.deltaTime;
+                transform.position -= transform.right * player.speed *Time.deltaTime;
             }
             walkn.Play("left");
         }

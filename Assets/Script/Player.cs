@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private GameObject hitboxes = null;
+    public float speed = 3;
     public bool orange = false;
     public bool stopUp = false;
     public bool stopDown = false;
