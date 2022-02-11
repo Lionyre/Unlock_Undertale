@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Danger
   - LanceMur
+  - EnemySnail
   layers:
   - Default
   - TransparentFX
