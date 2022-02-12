@@ -35,6 +35,7 @@ public class BattleMenu : MonoBehaviour
 	private bool canBeSpared;
 	private bool isAttacking;
 	public float barSpeed;
+	public Animator handle;
 	
 	void Start()
 	{
@@ -74,6 +75,7 @@ public class BattleMenu : MonoBehaviour
 		attackButton.enabled = true;
 		isAttacking = true;
 		attackSlider.value = 0;
+		handle.Play("normal");
 	}
 	
 	void FightAttack()
@@ -83,19 +85,23 @@ public class BattleMenu : MonoBehaviour
 		
 		float hitAccuracy = 0;
 		
-		if(attackSlider.value < 0.495f)
+		Debug.Log(attackSlider.value);
+		
+		if(attackSlider.value < 0.48f)
 		{
 			hitAccuracy = attackSlider.value * 1.8f + 0.1f;
 		}
-		else if(attackSlider.value >= 0.495f && attackSlider.value <= 0.505f)
+		else if(attackSlider.value >= 0.48f && attackSlider.value <= 0.52f)
 		{
-			
+			hitAccuracy = 1.2f;
+			Debug.Log("critical hit");
 		}
 		else
 		{
 			hitAccuracy = 1.1f - ((attackSlider.value - 0.5f) * 1.8f + 0.1f);
 		}
 		
+		handle.Play("flashing");
 		StartCoroutine(enemyHealth.TakeDamage(hitAccuracy));
 	}
 	

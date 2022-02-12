@@ -1823,6 +1823,7 @@ MonoBehaviour:
   wonText: {fileID: 894437172}
   enemyHealth: {fileID: 1210474390}
   barSpeed: 0.5
+  handle: {fileID: 1751274770}
 --- !u!1 &525070803
 GameObject:
   m_ObjectHideFlags: 0
@@ -4025,7 +4026,7 @@ MonoBehaviour:
   textAnimator: {fileID: 1950670577}
   enemyAnimator: {fileID: 1210474391}
   battleMenu: {fileID: 516307431}
-  baseDamage: 20
+  baseDamage: 25
   baseDamageDecay: 1.1
   sliderAnimDuration: 0.3
 --- !u!95 &1210474391
@@ -6239,6 +6240,7 @@ GameObject:
   - component: {fileID: 1751274767}
   - component: {fileID: 1751274769}
   - component: {fileID: 1751274768}
+  - component: {fileID: 1751274770}
   m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
@@ -6303,6 +6305,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751274766}
   m_CullTransparentMesh: 1
+--- !u!95 &1751274770
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751274766}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b0398f7e9394b0347ad5c7b29ded503d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1787256768
 GameObject:
   m_ObjectHideFlags: 0
