@@ -12,10 +12,11 @@ public class EnemyHealth : MonoBehaviour
 	public TMP_Text damageDealtText;
 	public Animator textAnimator;
 	public Animator enemyAnimator;
+	public BattleMenu battleMenu;
 	
 	public float baseDamage;
 	public float baseDamageDecay;
-	public float sliderAnimSpeed;
+	public float sliderAnimDuration;
 	
 	void Start()
 	{
@@ -28,19 +29,29 @@ public class EnemyHealth : MonoBehaviour
 	{
 		if(Input.GetKeyDown(KeyCode.A))
 		{
-			StartCoroutine(TakeDamage());
+			StartCoroutine(TakeDamage(1));
+		}
+		else if(Input.GetKeyDown(KeyCode.N))
+		{
+			StartCoroutine(TakeDamage(0.8f));
+		}
+		else if(Input.GetKeyDown(KeyCode.M))
+		{
+			StartCoroutine(TakeDamage(0.2f));
 		}
 	}
 	
-	IEnumerator TakeDamage()
+	public IEnumerator TakeDamage(float hitAccuracy)
 	{
-		float variance = Random.Range(0.85f, 1.15f);
-		float damageTakenF = baseDamage * variance;
+		yield return new WaitForSeconds(0.5f);
+		
+		float variance = Random.Range(0.9f, 1.1f);
+		float damageTakenF = baseDamage * variance * hitAccuracy;
 		int damageTaken = (int) damageTakenF;
 		
 		baseDamage = baseDamage * baseDamageDecay;
+		baseDamageDecay *= baseDamageDecay;
 		
-		int oldHealth = currentHealth;
 		currentHealth -= damageTaken;
 		
 		damageDealtText.text = damageTaken.ToString();
@@ -49,9 +60,12 @@ public class EnemyHealth : MonoBehaviour
 		textAnimator.Play("text_hit");
 		enemyAnimator.Play("hit");
 		
-		while(slider.value > currentHealth || slider.value <= 0)
+		float time = 0;
+		
+		while(time < sliderAnimDuration)
 		{
-			slider.value -= Time.deltaTime * sliderAnimSpeed;
+			time += Time.deltaTime;
+			slider.value = currentHealth + damageTaken * (1 - (time / sliderAnimDuration));
 			yield return new WaitForSeconds(0.01f);
 		}
 		
@@ -62,12 +76,12 @@ public class EnemyHealth : MonoBehaviour
 		
 		if(currentHealth <= 0)
 		{
-			Genocided();
+			enemyAnimator.Play("story_of_undertale");
+			battleMenu.Win(true);
 		}
-	}
-	
-	void Genocided()
-	{
-		enemyAnimator.Play("story_of_undertale");
+		else
+		{
+			battleMenu.EnemyTurn();
+		}
 	}
 }
