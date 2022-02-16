@@ -28,6 +28,8 @@ public class BattleMenu : MonoBehaviour
 	public GameObject battleBox;
 	
 	public Slider attackSlider;
+	public TMP_InputField itemInput;
+	public TMP_Text itemUseText;
 	public TMP_Text spareText;
 	public TMP_Text wonText;
 	public EnemyHealth enemyHealth;
@@ -40,7 +42,7 @@ public class BattleMenu : MonoBehaviour
 	void Start()
 	{
 		fightButton.onClick.AddListener(Fight);
-		itemButton.onClick.AddListener(UseItem); //temp
+		itemButton.onClick.AddListener(Item);
 		mercyButton.onClick.AddListener(Mercy);
 		
 		attackButton.onClick.AddListener(FightAttack);
@@ -49,6 +51,8 @@ public class BattleMenu : MonoBehaviour
 		mercyCancelButton.onClick.AddListener(Cancel);
 		itemCancelButton.onClick.AddListener(Cancel);
 		returnButton.onClick.AddListener(Quit);
+		
+		itemInput.onEndEdit.AddListener(delegate {UseItem(); });
 	}
 	
 	void Update()
@@ -110,7 +114,6 @@ public class BattleMenu : MonoBehaviour
 		textBox.SetActive(false);
 		battleBox.SetActive(true);
 		fightMenu.SetActive(false);
-		itemMenu.SetActive(false);
 		mercyMenu.SetActive(false);
 		battleMenu.SetActive(true);
 		
@@ -135,11 +138,26 @@ public class BattleMenu : MonoBehaviour
 	
 	void UseItem()
 	{
-		Debug.Log("gave stick");
-		//whole text box bullshit
-		canBeSpared = true;
+		StartCoroutine(UseItemC());
+	}
+	
+	IEnumerator UseItemC()
+	{
+		itemMenu.SetActive(false);
+		itemUseText.gameObject.SetActive(true);
 		
-		mainMenu.SetActive(false);
+		if(itemInput.text == "63") // 11?
+		{
+			itemUseText.text = "* You throw the spaghetti stick at Greater Dog.\n* It looks content and can be SPARED.";
+			canBeSpared = true;
+		}
+		else
+		{
+			itemUseText.text = "* Incorrect code.";
+		}
+		
+		yield return new WaitForSeconds(5f);
+		itemUseText.gameObject.SetActive(false);
 		EnemyTurn();
 	}
 	
