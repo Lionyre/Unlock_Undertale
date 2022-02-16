@@ -23,10 +23,10 @@ public class AdamMove : MonoBehaviour
 
     [Header("Statistique")]
 
-    public float PlayerSpeed;
-    public float clickPerSecond;
-    public float _timer = 1;
+    public float clickPerSecond, _timer = 1;
     public float _maxValue = 0.6f;
+    public float _ratio = 10;
+
 
     //----------------------------------------------------//
 
@@ -48,7 +48,7 @@ public class AdamMove : MonoBehaviour
 
     public void MovePlayer()
     {
-        _player.position += new Vector3(_clickCounter.value / 10, 0, 0);
+        _player.position += new Vector3(_clickCounter.value / (10/(_ratio/10)), 0, 0);
 
         if (_isStarted == true) clickPerSecond++;
 

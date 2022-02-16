@@ -27,7 +27,7 @@ public class SnailMover : MonoBehaviour
         {
             _speed = Random.Range(_minSpeed, _maxSpeed);
 
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(Random.Range(1, 2));
         }
 
         yield return new WaitForSeconds(0.1f);

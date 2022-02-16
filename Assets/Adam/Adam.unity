@@ -247,10 +247,10 @@ MonoBehaviour:
   _isStarted: 0
   _isEnded: 0
   _enemyWin: 0
-  PlayerSpeed: 10
   clickPerSecond: 0
   _timer: 0.5
   _maxValue: 0.6
+  _ratio: 15
 --- !u!1 &355128232
 GameObject:
   m_ObjectHideFlags: 0
