@@ -13,7 +13,7 @@ public class MoveSpearTowards : MonoBehaviour
         TargetPlayer = GameObject.Find("Coeur");
         _animator = this.gameObject.GetComponent<Animator>();
         StartCoroutine(CouroutineLance());
-        Destroy(this.gameObject, 5);
+        Destroy(this.gameObject, 20);
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class MoveSpearTowards : MonoBehaviour
         }
         else if(StopRotate == true)
         {
-            transform.position -= transform.up * 0.1f;
+            transform.position -= transform.up * 0.2f;
         }
     }
 
