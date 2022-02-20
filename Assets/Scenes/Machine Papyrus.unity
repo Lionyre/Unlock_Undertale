@@ -2157,8 +2157,8 @@ MonoBehaviour:
   _player: {fileID: 8219088554615715720}
   _gmSteph: {fileID: 1138984464}
   _croix: {fileID: -7764659627971493248, guid: 05924d1067377064c84aa385b184d119, type: 3}
-  _triangle: {fileID: 0}
   _stat: 0
+  _sprite: []
 --- !u!114 &8219088554615715720
 MonoBehaviour:
   m_ObjectHideFlags: 0
