@@ -6,11 +6,13 @@ TagManager:
   tags:
   - Danger
   - LanceMur
+  - EnemySnail
+  - WinFactor
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Form
   - Water
   - UI
   - 
@@ -19,7 +21,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - PlayerPapyrus
   - 
   - 
   - 

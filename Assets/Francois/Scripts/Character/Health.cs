@@ -11,7 +11,8 @@ public class Health : MonoBehaviour
     public int CurrentHealth;
     public Slider LifeSlider;
     public TMP_Text ValeurVie;
-    [SerializeField] private GameObject AnnonceMort;
+	
+	public bool usedDT = false;
 
     // Start is called before the first frame update
     void Start()
@@ -46,15 +47,22 @@ public class Health : MonoBehaviour
     {
         if(CurrentHealth <= 0)
         {
-            gameObject.GetComponent<SpriteRenderer>().enabled = false;
-            gameObject.GetComponent<BoxCollider2D>().enabled = false;
-            StartCoroutine("YouDead");
+			if(usedDT)
+			{
+				Scene scene = SceneManager.GetActiveScene(); 
+				SceneManager.LoadScene(scene.name);
+			}
+			else
+			{
+				CurrentHealth = 1;
+				usedDT = true;
+			}
         }
     }
 
     IEnumerator YouDead()
     {
-        AnnonceMort.SetActive(true);
+        //AnnonceMort.SetActive(true);
         yield return new WaitForSeconds(5);
         Scene scene = SceneManager.GetActiveScene(); 
         SceneManager.LoadScene(scene.name);
