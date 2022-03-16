@@ -125,8 +125,11 @@ MonoBehaviour:
   _player: {fileID: 0}
   _gmSteph: {fileID: 0}
   _croix: {fileID: -7764659627971493248, guid: 05924d1067377064c84aa385b184d119, type: 3}
-  _triangle: {fileID: 1804904819385363709, guid: 229a43596fe91a3469a62462b23efad3, type: 3}
   _stat: 0
+  _sprite:
+  - {fileID: 21300000, guid: 98123c4eac2ebc742b1252edd9553189, type: 3}
+  - {fileID: 21300000, guid: 83be62d6548719641acde915a6fa968a, type: 3}
+  - {fileID: 21300000, guid: 98123c4eac2ebc742b1252edd9553189, type: 3}
 --- !u!1 &7159742881830685708
 GameObject:
   m_ObjectHideFlags: 0
