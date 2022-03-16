@@ -8,6 +8,7 @@ TagManager:
   - LanceMur
   - EnemySnail
   - WinFactor
+  - Flee
   layers:
   - Default
   - TransparentFX
