@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpearPrefab: {fileID: 520730862158711834, guid: 867aaf7a6e7be6c4299cd9e912a3af60, type: 3}
+  Player: {fileID: 1787256768}
 --- !u!1 &115273696
 GameObject:
   m_ObjectHideFlags: 0
@@ -3566,7 +3567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3967448834c0faa4b814a372848c0139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 50
+  MaxHealth: 20
   CurrentHealth: 0
   LifeSlider: {fileID: 1380518463}
   ValeurVie: {fileID: 1919206950}
