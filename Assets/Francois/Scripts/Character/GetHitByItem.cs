@@ -6,6 +6,7 @@ public class GetHitByItem : MonoBehaviour
 {
     [SerializeField] private Health HealthPlayer;
     private bool IsHit;
+    public Color ColorImage;
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Danger")
@@ -25,8 +26,20 @@ public class GetHitByItem : MonoBehaviour
     IEnumerator CoolDownHit()
     {
         IsHit = true;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
+        ColorImage.a = 0f;
+        yield return new WaitForSeconds(0.1f);
+        ColorImage.a = 1f;
+        yield return new WaitForSeconds(0.1f);
+        ColorImage.a = 0f;
+        yield return new WaitForSeconds(0.1f);
+        ColorImage.a = 1f;
+        yield return new WaitForSeconds(0.1f);
         IsHit = false;
         
+    }
+
+    private void Update() {
+        gameObject.GetComponent<SpriteRenderer>().color = ColorImage;
     }
 }

@@ -3917,6 +3917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthPlayer: {fileID: 1787256775}
+  ColorImage: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &1787256777
 MonoBehaviour:
   m_ObjectHideFlags: 0
