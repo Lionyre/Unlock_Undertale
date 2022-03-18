@@ -17,6 +17,7 @@ public class Move : MonoBehaviour
     {
         if(player.stopUp == false && player.stopAll == false && !Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow)){
             //transform.position += transform.up * player.speed *Time.deltaTime;
+            player.stopAll = true;
             X = false;
             StartCoroutine(str8movin(new Vector3(0,0.1f,0)));
             walkn.Play("up");
@@ -26,6 +27,7 @@ public class Move : MonoBehaviour
     {
         if(player.stopDown == false && player.stopAll == false && !Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow)){
             //transform.position -= transform.up * player.speed *Time.deltaTime;
+            player.stopAll = true;
             X = false;
             StartCoroutine(str8movin(new Vector3(0,-0.1f,0)));
             walkn.Play("down");
@@ -35,6 +37,7 @@ public class Move : MonoBehaviour
     {
         if(player.stopLeft == false && player.stopAll == false){
             //transform.position -= transform.right * player.speed *Time.deltaTime;
+            player.stopAll = true;
             X = true;
             StartCoroutine(str8movin(new Vector3(-0.1f,0,0)));
             walkn.Play("left");
@@ -44,6 +47,7 @@ public class Move : MonoBehaviour
     {
         if(player.stopRight == false && player.stopAll == false){
             //transform.position += transform.right * player.speed *Time.deltaTime;
+            player.stopAll = true;
             X = true;
             StartCoroutine(str8movin(new Vector3(0.1f,0,0)));
             walkn.Play("right");
@@ -51,8 +55,6 @@ public class Move : MonoBehaviour
     }
     private IEnumerator str8movin(Vector3 direcfion)
     {
-        Debug.Log("allo");   
-        player.stopAll = true;
         while(avancement < 1)
         {
             transform.position += direcfion;
