@@ -8,6 +8,7 @@ public class Slidin : MonoBehaviour
     private Animator direction;
 
     private void OnTriggerEnter2D(Collider2D other) {
+        
         if (other.gameObject.layer == 0 && other.gameObject.name == "Player")
         {
             other.gameObject.GetComponent<Move>().avancement -= 1;

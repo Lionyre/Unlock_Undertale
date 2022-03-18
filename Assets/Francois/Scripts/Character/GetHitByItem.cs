@@ -16,6 +16,10 @@ public class GetHitByItem : MonoBehaviour
             }
             StartCoroutine(CoolDownHit());
         }
+        else if(other.gameObject.tag == "LanceMur")
+        {
+            HealthPlayer.CurrentHealth = 0;
+        }
     }
 
     IEnumerator CoolDownHit()

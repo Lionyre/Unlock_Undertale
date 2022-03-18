@@ -5,6 +5,7 @@ using UnityEngine;
 public class BoxChangement : MonoBehaviour
 {
     public GameObject PrefabSpear;
+    public GameObject Dialogue;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,10 @@ public class BoxChangement : MonoBehaviour
 
     IEnumerator SpearAndBox()
     {
-        yield return new WaitForSeconds(30);
+        yield return new WaitForSeconds(25);
+        Dialogue.SetActive(true);
+        yield return new WaitForSeconds(5);
+        Dialogue.SetActive(false);
         Instantiate(PrefabSpear);
         yield return new WaitForSeconds(30);
         Destroy(this.gameObject);
