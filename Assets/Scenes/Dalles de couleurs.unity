@@ -237,7 +237,7 @@ PrefabInstance:
       objectReference: {fileID: 1943784672}
     - target: {fileID: 6757432349106953394, guid: 1d9458460db47cc4da53322c878a1874, type: 3}
       propertyPath: water
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6757432349106953394, guid: 1d9458460db47cc4da53322c878a1874, type: 3}
       propertyPath: player
