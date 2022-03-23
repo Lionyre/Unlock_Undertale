@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class MovingWithButton : MonoBehaviour
 {
-    public MovingHeart GetBool;
     [SerializeField] private float VitesseDeplacement;
-    public VariableJoystick variableJoystick;
+    private VariableJoystick variableJoystick;
+    [SerializeField] private float DeadZone;
+
+    private void Awake() {
+        variableJoystick = GameObject.Find("Variable_Joystick").GetComponent<VariableJoystick>();
+    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -16,19 +20,19 @@ public class MovingWithButton : MonoBehaviour
 
     void BoolHell()
     {
-        if(variableJoystick.Direction.y > 0.5)
+        if(variableJoystick.Direction.y > DeadZone)
         {
             transform.position += new Vector3(0,VitesseDeplacement,0);
         }
-        else if(variableJoystick.Direction.y < -0.5)
+        else if(variableJoystick.Direction.y < -DeadZone)
         {
             transform.position += new Vector3(0,-VitesseDeplacement,0);
         }
-        if(variableJoystick.Direction.x < -0.5)
+        if(variableJoystick.Direction.x < -DeadZone)
         {
             transform.position += new Vector3(-VitesseDeplacement,0,0);
         }
-        else if(variableJoystick.Direction.x > 0.5)
+        else if(variableJoystick.Direction.x > DeadZone)
         {
            transform.position += new Vector3(VitesseDeplacement,0,0); 
         }
