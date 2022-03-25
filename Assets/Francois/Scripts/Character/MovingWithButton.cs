@@ -23,18 +23,29 @@ public class MovingWithButton : MonoBehaviour
         if(variableJoystick.Direction.y > DeadZone)
         {
             transform.position += new Vector3(0,VitesseDeplacement,0);
+            gameObject.GetComponent<Animator>().SetBool("IsMoving", true);
         }
         else if(variableJoystick.Direction.y < -DeadZone)
         {
             transform.position += new Vector3(0,-VitesseDeplacement,0);
+            gameObject.GetComponent<Animator>().SetBool("IsMoving", true);
         }
         if(variableJoystick.Direction.x < -DeadZone)
         {
             transform.position += new Vector3(-VitesseDeplacement,0,0);
+            gameObject.GetComponent<Animator>().SetBool("IsMoving", true);
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
         else if(variableJoystick.Direction.x > DeadZone)
         {
-           transform.position += new Vector3(VitesseDeplacement,0,0); 
+           transform.position += new Vector3(VitesseDeplacement,0,0);
+           gameObject.GetComponent<Animator>().SetBool("IsMoving", true);
+           gameObject.GetComponent<SpriteRenderer>().flipX = true; 
+        }
+
+        else
+        {
+            gameObject.GetComponent<Animator>().SetBool("IsMoving", false);
         }
     }
 }
