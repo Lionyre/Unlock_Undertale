@@ -59,4 +59,12 @@ public class Health : MonoBehaviour
 			}
         }
     }
+
+    IEnumerator YouDead()
+    {
+        //AnnonceMort.SetActive(true);
+        yield return new WaitForSeconds(5);
+        Scene scene = SceneManager.GetActiveScene(); 
+        SceneManager.LoadScene(scene.name);
+    }
 }

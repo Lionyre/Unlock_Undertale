@@ -23,11 +23,11 @@ public class SnailMover : MonoBehaviour
 
     IEnumerator SpeedChange()
     {
-        if(_adamMove._isStarted == true)
+        if(_adamMove._isStarted == true && _adamMove._canClick == true)
         {
             _speed = Random.Range(_minSpeed, _maxSpeed);
 
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(Random.Range(0, 10));
         }
 
         yield return new WaitForSeconds(0.1f);
