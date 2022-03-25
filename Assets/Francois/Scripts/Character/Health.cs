@@ -11,6 +11,7 @@ public class Health : MonoBehaviour
     public int CurrentHealth;
     public Slider LifeSlider;
     public TMP_Text ValeurVie;
+    public GameObject AnnonceMort;
 	
 	public bool usedDT = false;
 
@@ -47,10 +48,10 @@ public class Health : MonoBehaviour
     {
         if(CurrentHealth <= 0)
         {
+            CurrentHealth = 0;
 			if(usedDT)
 			{
-				Scene scene = SceneManager.GetActiveScene(); 
-				SceneManager.LoadScene(scene.name);
+				StartCoroutine(YouDead());
 			}
 			else
 			{
@@ -62,7 +63,8 @@ public class Health : MonoBehaviour
 
     IEnumerator YouDead()
     {
-        //AnnonceMort.SetActive(true);
+        AnnonceMort.SetActive(true);
+        gameObject.GetComponent<SpriteRenderer>().sprite = null;
         yield return new WaitForSeconds(5);
         Scene scene = SceneManager.GetActiveScene(); 
         SceneManager.LoadScene(scene.name);
