@@ -10,8 +10,9 @@ public class WaterHazard : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other) {
         if (other.gameObject.layer == 0 && other.gameObject.name == "Player")
         {
-            Debug.Log("oskour");
+            other.gameObject.GetComponent<Move>().avancement = 1;
             direction = other.gameObject.GetComponent<Animator>();
+            player.stopAll = true;
             if(direction.GetCurrentAnimatorStateInfo(0).IsName("up"))
             {
                 player.transform.position -= transform.up * 2 * player.speed *Time.deltaTime;
