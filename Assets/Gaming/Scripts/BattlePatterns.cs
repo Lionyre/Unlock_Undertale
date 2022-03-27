@@ -10,12 +10,15 @@ public class BattlePatterns : MonoBehaviour
 	public GameObject spearSpin;
 	public GameObject spearSmash;
 	public GameObject dog;
+	public GameObject bark;
 	
 	private int pattern;
 	private int lastPattern;
+	private int barksLeft;
 	private float timerSpawn;
+	private bool spawnedDog;
 	
-	void OnEnabled()
+	void OnEnable()
 	{
 		while(pattern == lastPattern)
 		{
@@ -23,6 +26,11 @@ public class BattlePatterns : MonoBehaviour
 		}
 		
 		lastPattern = pattern;
+		
+		barksLeft = 0;
+		spawnedDog = false;
+		
+		Debug.Log(pattern);
 	}
 	
 	void Update()
@@ -30,7 +38,7 @@ public class BattlePatterns : MonoBehaviour
 		timerSpawn -= Time.deltaTime;
 		
 		if(timerSpawn <= 0 && soul.GetComponent<Health>().CurrentHealth > 0)
-		{
+		{	
 			if(pattern == 1)
 			{
 				StartCoroutine(SpearSwipes());
@@ -41,7 +49,7 @@ public class BattlePatterns : MonoBehaviour
 			}
 			else
 			{
-				StartCoroutine(Dog());
+				Dog();
 			}
 		}
 	}
@@ -64,11 +72,27 @@ public class BattlePatterns : MonoBehaviour
 		Instantiate(spearSmash, new Vector3(Random.Range(-1.33f, 1.33f), 2.5f, 0f), Quaternion.identity);
 	}
 	
-	IEnumerator Dog()
+	void Dog()
 	{
-		//dog barks at you
-		
-		yield return new WaitForSeconds(0.01f);
-		SpearSmash();
+		if(spawnedDog)
+		{
+			timerSpawn = 0.4f;
+			
+			if(barksLeft <= 0)
+			{
+				barksLeft = Random.Range(0, 4);
+			}
+			else
+			{
+				barksLeft--;
+				Instantiate(bark, new Vector3(0f, -2.3f, 0f), Quaternion.identity);
+			}
+		}
+		else
+		{	
+			spawnedDog = true;
+			GameObject doggo = Instantiate(dog, new Vector3(0f, -2.3f, 0f), Quaternion.identity);
+			Destroy(doggo, 10);
+		}
 	}
 }

@@ -6,6 +6,6 @@ public class TouhouMasterSpark : MonoBehaviour
 {
 	void Awake()
 	{
-		GetComponent<Rigidbody2D>().AddForce(new Vector3(Random.Range(0.1f, 1f), Random.Range(1f, 3f), 0));
+		GetComponent<Rigidbody2D>().AddForce(new Vector3(Random.Range(-100f, 100f), Random.Range(150f, 330f), 0));
 	}
 }

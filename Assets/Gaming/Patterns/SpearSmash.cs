@@ -12,6 +12,7 @@ public class SpearSmash : MonoBehaviour
 	
 	private Collider2D boxBottom;
 	public GameObject spark;
+	public Transform spearTip;
 	
 	void Awake()
 	{
@@ -29,7 +30,7 @@ public class SpearSmash : MonoBehaviour
 		}
 		if(StopRotate == false && AnimationIsFinish == true)
 		{
-			RotateTowards(transform.position - transform.up);
+			RotateTowards(transform.position - Vector3.up);
 		}
 		else if(StopRotate == true && moving == true)
 		{
@@ -60,16 +61,16 @@ public class SpearSmash : MonoBehaviour
 		{
 			moving = false;
 			
-			int sparkCount = Random.Range(3, 8);
+			int sparkCount = Random.Range(4, 10);
 			while(sparkCount >= 1)
 			{
-				Instantiate(spark, new Vector3(transform.position.x, transform.position.y, 0f), Quaternion.identity);
+				Instantiate(spark, new Vector3(spearTip.position.x, spearTip.position.y, 0f), Quaternion.identity);
 				sparkCount--;
 			}
 			
 			GetComponent<Collider2D>().enabled = false;
-			//animator.Play(disaspear_ptdr);
-			Destroy(gameObject, 3);
+			_animator.Play("disaspear_ptdr");
+			Destroy(gameObject, 2f);
 		}
 	}
 }
