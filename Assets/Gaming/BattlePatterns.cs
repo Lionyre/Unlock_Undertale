@@ -6,8 +6,14 @@ public class BattlePatterns : MonoBehaviour
 {
 	public GameObject soul;
 	
+	public GameObject spearSwipe;
+	public GameObject spearSpin;
+	public GameObject spearSmash;
+	public GameObject dog;
+	
 	private int pattern;
 	private int lastPattern;
+	private float timerSpawn;
 	
 	void OnEnabled()
 	{
@@ -17,33 +23,52 @@ public class BattlePatterns : MonoBehaviour
 		}
 		
 		lastPattern = pattern;
+	}
+	
+	void Update()
+	{
+		timerSpawn -= Time.deltaTime;
 		
-		switch(pattern)
+		if(timerSpawn <= 0 && soul.GetComponent<Health>().CurrentHealth > 0)
 		{
-		case 0:
-			SpearSwipes();
-			break;
-		case 1:
-			SpearSmash();
-			break;
-		case 2:
-			Dog();
-			break;
+			if(pattern == 1)
+			{
+				StartCoroutine(SpearSwipes());
+			}
+			else if(pattern == 2)
+			{
+				SpearSmash();
+			}
+			else
+			{
+				StartCoroutine(Dog());
+			}
 		}
 	}
 	
-	void SpearSwipes()
+	
+	
+	
+	
+	IEnumerator SpearSwipes()
 	{
 		//spear swipes most of the attack box from an horizontal direction, then another in the other
+		
+		yield return new WaitForSeconds(0.01f);
+		SpearSmash();
 	}
 	
 	void SpearSmash()
 	{
-		//spear comes down towards soul until it hits the bottom of the box, stops and creates some spark projectiles
+		timerSpawn = 3f;
+		Instantiate(spearSmash, new Vector3(Random.Range(-1.33f, 1.33f), 2.5f, 0f), Quaternion.identity);
 	}
 	
-	void Dog()
+	IEnumerator Dog()
 	{
 		//dog barks at you
+		
+		yield return new WaitForSeconds(0.01f);
+		SpearSmash();
 	}
 }
