@@ -60,15 +60,17 @@ public class BattlePatterns : MonoBehaviour
 	
 	IEnumerator SpearSwipes()
 	{
-		//spear swipes most of the attack box from an horizontal direction, then another in the other
-		
-		yield return new WaitForSeconds(0.01f);
-		SpearSmash();
+		timerSpawn = 10f;
+		Instantiate(spearSwipe, new Vector3(4f, -1f, 0f), Quaternion.identity);
+		yield return new WaitForSeconds(3f);
+		Instantiate(spearSwipe, new Vector3(-4f, -1f, 0f), Quaternion.identity);
+		yield return new WaitForSeconds(3f);
+		Instantiate(spearSpin, new Vector3(4f, -1f, 0f), Quaternion.identity);
 	}
 	
 	void SpearSmash()
 	{
-		timerSpawn = 3f;
+		timerSpawn = 2.6f;
 		Instantiate(spearSmash, new Vector3(Random.Range(-1.33f, 1.33f), 2.5f, 0f), Quaternion.identity);
 	}
 	

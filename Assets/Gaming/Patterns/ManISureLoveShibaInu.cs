@@ -11,6 +11,8 @@ public class ManISureLoveShibaInu : MonoBehaviour
 	{
 		player = GameObject.Find("Coeur").transform;
 		dir = player.position - transform.position;
+		
+		Destroy(gameObject, 2f);
 	}
 	
 	void Update()

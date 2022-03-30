@@ -954,8 +954,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soul: {fileID: 1787256768}
-  spearSwipe: {fileID: 0}
-  spearSpin: {fileID: 0}
+  spearSwipe: {fileID: 6421092553819260186, guid: 5acee3c8ef6105a46a6d77164420363f, type: 3}
+  spearSpin: {fileID: 6421092553819260186, guid: fba0180bdba326f43b39c22219385187, type: 3}
   spearSmash: {fileID: 2971401513506174190, guid: a3a3b52579c20f3438ac336a192701a6, type: 3}
   dog: {fileID: 2729290803809400391, guid: 484f5a3c20fbcaa48a439c2381f23441, type: 3}
   bark: {fileID: 5173372460523707478, guid: 44d169f73fdf3fa4e9ae1a414c28bf41, type: 3}
@@ -7471,7 +7471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthPlayer: {fileID: 1787256775}
-  ColorImage: {r: 0, g: 0, b: 0, a: 0}
+  ColorImage: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &1799700463
 GameObject:
   m_ObjectHideFlags: 0
