@@ -18,7 +18,7 @@ public class SnailMover : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.position += new Vector3(_speed / 100, 0, 0);
+        transform.position += new Vector3(2 * _speed / 100, 0, 0);
     }
 
     IEnumerator SpeedChange()

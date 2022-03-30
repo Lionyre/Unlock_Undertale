@@ -6,19 +6,20 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDeathSteph : MonoBehaviour
 {
-    [SerializeField] private Player _player;
+    [SerializeField] private PlayerPMove _player;
+
+    private void Start()
+    {
+        _player = GameObject.FindObjectOfType<PlayerPMove>();
+    }
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        
         if (other.gameObject.name == _player.gameObject.name)
         {
             Debug.Log("PlayerDeath");
 
             SceneManager.LoadScene("Machine Papyrus");
-
-
-            
         }
     }
 }

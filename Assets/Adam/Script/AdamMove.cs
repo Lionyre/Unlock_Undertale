@@ -33,8 +33,11 @@ public class AdamMove : MonoBehaviour
     [Header("Start Game")]
 
     public Animator _animator = null;
+    public Animation _support = null;
 
     //----------------------------------------------------//
+
+
 
     private void Start()
     {
@@ -51,18 +54,19 @@ public class AdamMove : MonoBehaviour
         }
 
         SnailEndGame();
+
     }
 
     private void FixedUpdate()
     {
-        _player.position += new Vector3(_clickCounter.value / (10 / (_ratio / 10)), 0, 0);
+        _player.position += new Vector3(2 * _clickCounter.value / (10 / (_ratio / 10)), 0, 0);
     }
 
     public void MovePlayer()
     {
         if (_isStarted == true)
         {
-            if (_canClick == true) clickPerSecond++;
+            if (_canClick == true) { clickPerSecond++; _animator.speed = _clickCounter.value * 3; }
         }
         else
         {
@@ -91,7 +95,7 @@ public class AdamMove : MonoBehaviour
     IEnumerator StartGame()
     {
         _animator.SetTrigger("Start");
-        yield return new WaitForSeconds(3.2f);
+        yield return new WaitForSeconds(4f);
         _canClick = true;
     }
 }

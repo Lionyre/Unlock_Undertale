@@ -4,37 +4,38 @@ using UnityEngine;
 
 public class PlayerPMove : MonoBehaviour
 {
-    Vector2 _movementX;
-    Vector2 _movementY;
-    private float _speed;
+    public float _speed;
     [SerializeField] private Rigidbody2D _rb;
+
+    public ChangeForm[] _changeForms;
+
+    public  Vector2 _movement;
+    public  Vector2 _currentMovement;
+
+    public bool _canMove;
+
+    private void Start()
+    {
+        _changeForms = GameObject.FindObjectsOfType<ChangeForm>();
+
+        
+    }
 
     void Update()
     {
+        _rb.velocity = _currentMovement;
 
-
-        MovePlayer();
-
-
+        if(_canMove)
+        {
+            _currentMovement = _movement;
+            MovePlayer();
+        }
 
     }
 
     private void MovePlayer()
     {
-        /*float h = Input.GetAxis("Horizontal") * _speed;*/
-
-      
-        float h = Input.GetAxis("Horizontal") * _speed;
-        _rb.velocity = new Vector2(h , _rb.velocity.x);
-
-
-        float v = Input.GetAxis("Vertical") * _speed;
-        _rb.velocity = new Vector2(v, _rb.velocity.y);
-
-
-        Debug.Log("Player OK");
-
+        _movement.x = Input.GetAxisRaw("Horizontal") * _speed;
+        _movement.y = Input.GetAxisRaw("Vertical") * _speed;
     }
-
-
 }
