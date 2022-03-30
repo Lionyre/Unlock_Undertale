@@ -2215,17 +2215,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
---- !u!114 &1226813445 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1113792801, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
-  m_PrefabInstance: {fileID: 6723532213591458977}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c487d2a53a413e24db96ca9fd93c4b15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1246535071
 GameObject:
   m_ObjectHideFlags: 0
@@ -4433,53 +4422,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 952065585424937760, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 952065585424937760, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 952065585424937760, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+    - target: {fileID: 181309259431245988, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
+      propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1226813445}
-    - target: {fileID: 952065585424937760, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 952065585424937760, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetValue
+    - target: {fileID: 1279291387573212320, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
+      propertyPath: m_Sprite
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 952065585424937760, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: EnterNumber, Assembly-CSharp
+    - target: {fileID: 1619811721651782635, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
+      propertyPath: m_Sprite
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 952065585424937760, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+    - target: {fileID: 2216844936479381612, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2964565276323362118, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
-      propertyPath: m_Transition
+    - target: {fileID: 2274575921764159391, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944393294588208727, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6723532211857461587, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
+      propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2964565276323362118, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
-      propertyPath: m_Interactable
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2964565276323362118, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
-      propertyPath: m_Colors.m_NormalColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2964565276323362118, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
-      propertyPath: m_Colors.m_NormalColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2964565276323362118, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
-      propertyPath: m_Colors.m_NormalColor.r
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6723532212490265985, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
       propertyPath: m_RootOrder
@@ -4529,13 +4498,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnterCode
       objectReference: {fileID: 0}
-    - target: {fileID: 6723532212490266046, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6723532213351859767, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1434855325}
+    - target: {fileID: 7287131471485223599, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022137466381569247, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076598200840197525, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132734461208087744, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173185747207501793, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8376827182225842817, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8998512252853133575, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1fafede91074b04d8e9587482a089ca, type: 3}

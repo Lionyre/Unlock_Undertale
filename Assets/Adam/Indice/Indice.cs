@@ -4,13 +4,20 @@ using UnityEngine;
 public class Indice : ScriptableObject
 {
     [Header("Le numero que les joueurs rentre :")]
-    public string _cardNumber = null;
+    [SerializeField] private int _cardID;
 
     [Header("Les trois indices :")]
-    [TextArea(5, 20)] public string _firstClue = null;
-    [TextArea(5, 20)] public string _secondClue = null;
-    [TextArea(5, 20)] public string _thirdClue = null;
+    [TextArea(5, 20), SerializeField] private string _firstClue = null;
+    [TextArea(5, 20), SerializeField] private string _secondClue = null;
+    [TextArea(5, 20), SerializeField] private string _thirdClue = null;
 
     [Header("Les fonctions utilisables :")]
-    public bool isUsed = false;
+    [SerializeField] private bool isUsed = false;
+
+
+    public int _CardID { get => _cardID; set => _cardID = value; }
+    public string _FirstClue { get => _firstClue; set => _firstClue = value; }
+    public string _SecondClue { get => _secondClue; set => _secondClue = value; }
+    public string _ThirdClue { get => _thirdClue; set => _thirdClue = value; }
+
 }
