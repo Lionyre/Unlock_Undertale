@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManagerSteph : MonoBehaviour
 {
     public int _counter = 0;
-    public int _tileNumber = 0;
+    public int _tileNumber = 8;
 
     public GameObject _tileParent;
 

@@ -8,6 +8,7 @@ public class PlayerPMove : MonoBehaviour
     [SerializeField] private Rigidbody2D _rb;
 
     public ChangeForm[] _changeForms;
+    //public ChangeForm1[] _changeForms1;
 
     public  Vector2 _movement;
     public  Vector2 _currentMovement;
@@ -17,8 +18,9 @@ public class PlayerPMove : MonoBehaviour
     private void Start()
     {
         _changeForms = GameObject.FindObjectsOfType<ChangeForm>();
+        //_changeForms1 = GameObject.FindObjectsOfType<ChangeForm1>();
 
-        
+
     }
 
     void Update()
@@ -37,5 +39,16 @@ public class PlayerPMove : MonoBehaviour
     {
         _movement.x = Input.GetAxisRaw("Horizontal") * _speed;
         _movement.y = Input.GetAxisRaw("Vertical") * _speed;
+
+        if(_movement.x != 0) 
+        {
+            _movement.y = 0;
+        }
+
+        if(_movement.y != 0)
+        {
+            _movement.x = 0;
+        }
+
     }
 }
