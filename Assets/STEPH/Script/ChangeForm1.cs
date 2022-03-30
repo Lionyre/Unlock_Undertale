@@ -14,7 +14,7 @@ public class ChangeForm1 : MonoBehaviour
 
     [SerializeField] Sprite[] _sprite;
 
-    private int i = 0;
+    //private int i = 0;
 
     enum Stat
     {
