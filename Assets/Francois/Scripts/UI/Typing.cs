@@ -7,7 +7,7 @@ using TMPro;
 public class Typing : MonoBehaviour
 {
     private string number = "";
-    public TextMeshPro Input;
+    public TMP_Text Input;
 
     public void Zero(){
         number += "0";
