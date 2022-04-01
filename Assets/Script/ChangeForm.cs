@@ -16,7 +16,7 @@ public class ChangeForm : MonoBehaviour
 
     private int i = 0;
 
-    enum Stat
+    public enum Stat
     {
         Rond,
         Croix,
