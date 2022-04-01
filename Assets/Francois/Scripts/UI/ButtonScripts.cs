@@ -8,10 +8,14 @@ public class ButtonScripts : MonoBehaviour
     [SerializeField] private Button QuitApp;
     [SerializeField] private Button PlayAndPause;
     [SerializeField] private Button Penaliter;
+    [SerializeField] private Button Paramètre;
+    [SerializeField] private Button LeaveParameter;
+    public GameObject ParamètreContainer;
 
 
     private bool IsOnPause;
     private Timer TheTimer;
+    private bool ParametreIsOn;
 
     private void Awake() {
         Time.timeScale = 0;
@@ -25,6 +29,8 @@ public class ButtonScripts : MonoBehaviour
         QuitApp.onClick.AddListener(QuitTheApp);
         PlayAndPause.onClick.AddListener(PauseTimer);
         Penaliter.onClick.AddListener(PenaliterTimer);
+        Paramètre.onClick.AddListener(ParamètreActive);
+        LeaveParameter.onClick.AddListener(LeaveParametre);
     }
 
     // Update is called once per frame
@@ -60,5 +66,15 @@ public class ButtonScripts : MonoBehaviour
     void PenaliterTimer()
     {
         TheTimer.timeRemaining -= (180);
+    }
+
+    void ParamètreActive()
+    {
+        ParamètreContainer.SetActive(true);
+    }
+
+    void LeaveParametre()
+    {
+         ParamètreContainer.SetActive(false);
     }
 }

@@ -8,6 +8,8 @@ public class Timer : MonoBehaviour
     public float timeRemaining = 10;
     public bool timerIsRunning = false;
     public TMP_Text TimerText;
+    public bool TimerIsActive;
+
     private void Start()
     {
         // Starts the timer automatically
@@ -15,7 +17,16 @@ public class Timer : MonoBehaviour
     }
     void Update()
     {
-        DisplayTime(timeRemaining);
+        if(TimerIsActive == true)
+        {
+            DisplayTime(timeRemaining);
+            timerIsRunning = true;
+        }
+        else if(TimerIsActive == false)
+        {
+            TimerText.text = string.Format("--------");
+            timerIsRunning = false;
+        }
         if (timerIsRunning)
         {
             if (timeRemaining > 0)
@@ -29,6 +40,8 @@ public class Timer : MonoBehaviour
             }
         }
     }
+
+    
 
     void DisplayTime(float timeToDisplay)
     {
