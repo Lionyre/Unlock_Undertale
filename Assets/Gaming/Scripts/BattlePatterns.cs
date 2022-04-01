@@ -29,8 +29,16 @@ public class BattlePatterns : MonoBehaviour
 		
 		barksLeft = 0;
 		spawnedDog = false;
-		
-		Debug.Log(pattern);
+		soul.transform.position = new Vector3(0f, -1.48f, 0f);
+	}
+	
+	void OnDisable()
+	{
+		GameObject[] bullets = GameObject.FindGameObjectsWithTag("Danger");
+		foreach(GameObject bullet in bullets)
+		{
+			Destroy(bullet);
+		}
 	}
 	
 	void Update()
