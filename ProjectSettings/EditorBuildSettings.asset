@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/InterfaceFrancois.unity
     guid: 3868ce734376c964b9bd3e617e443788
+  - enabled: 1
+    path: Assets/Scenes/FrancoisMinigame.unity
+    guid: e986cbdef852dda4b8888b6594d98cf8
   m_configObjects: {}
