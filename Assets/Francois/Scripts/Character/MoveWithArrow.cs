@@ -5,12 +5,17 @@ using UnityEngine;
 public class MoveWithArrow : MonoBehaviour
 {
     public MovingHeart GetBool;
+    public PlayerPMove _playerPMove;
+
     [SerializeField] private float VitesseDeplacement;
 
     // Update is called once per frame
     void FixedUpdate()
     {
         BoolHell();
+
+        _playerPMove.StayGlace();
+
     }
 
     void BoolHell()
