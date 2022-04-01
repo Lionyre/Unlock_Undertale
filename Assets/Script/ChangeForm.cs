@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChangeForm : MonoBehaviour
 {
-    [SerializeField] private Player _player;
+    [SerializeField] private PlayerPMove _player;
 
     [SerializeField] private GameManagerSteph _gmSteph;
 
@@ -25,7 +25,7 @@ public class ChangeForm : MonoBehaviour
 
     private void Start()
     {
-        _player = GameObject.FindObjectOfType<Player>();
+        _player = GameObject.FindObjectOfType<PlayerPMove>();
         _gmSteph = GameObject.FindObjectOfType<GameManagerSteph>();
     }
 
@@ -52,16 +52,20 @@ public class ChangeForm : MonoBehaviour
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = _sprite[i];
 
                 this.gameObject.GetComponent<SpriteRenderer>().color = new Vector4(Random.Range(0,255), Random.Range(0,255),Random.Range(0,255),255);
-
-                
-
             }
-
         }
 
-        // other.gameObject.GetComponent<SpriteRenderer>().sprite = _croix;
+        if (other.gameObject.name == _player.gameObject.name)
+        {
+            other.GetComponent<PlayerPMove>()._canMove = true;
+        }
+    }
 
-        // if(other.gameObject)
-
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == _player.gameObject.name)
+        {
+            collision.GetComponent<PlayerPMove>()._canMove = false;
+        }
     }
 }

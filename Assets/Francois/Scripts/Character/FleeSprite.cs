@@ -10,7 +10,8 @@ public class FleeSprite : MonoBehaviour
     {
         if(other.gameObject.tag == "Flee")
         {
-            gameObject.GetComponent<SpriteRenderer>().sprite = HeartFlee;
+            gameObject.GetComponent<Animator>().enabled = true;
+            gameObject.GetComponent<Animator>().SetBool("TouchLayer", true);
         }
     }
 }
