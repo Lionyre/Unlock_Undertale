@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 42
   m_EditorClassIdentifier: 
   _cardID: 42
-  _firstClue: 
-  _secondClue: 
-  _thirdClue: 
+  _firstClue: drfg
+  _secondClue: ergerqg
+  _thirdClue: 'ryreqgerqgqregqe '
   isUsed: 0
