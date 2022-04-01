@@ -6,10 +6,22 @@ public class WaterHazard : MonoBehaviour
 {
     [SerializeField] private Player player = null;
     private Animator direction;
+    public bool water;
+    public GameObject thunder;
+    public GameObject fish;
 
     private void OnTriggerStay2D(Collider2D other) {
         if (other.gameObject.layer == 0 && other.gameObject.name == "Player")
         {
+            if(water == true)
+            {
+                fish.SetActive(true);
+            }
+            else
+            {
+                thunder.SetActive(true);
+            }
+
             other.gameObject.GetComponent<Move>().avancement = 1;
             direction = other.gameObject.GetComponent<Animator>();
             player.stopAll = true;

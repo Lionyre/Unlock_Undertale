@@ -128,6 +128,7 @@ public class BattleMenu : MonoBehaviour
 		textBox.SetActive(true);
 		battleMenu.SetActive(false);
 		mainMenu.SetActive(true);
+		StopAllCoroutines();
 	}
 	
 	void Item()
@@ -150,13 +151,16 @@ public class BattleMenu : MonoBehaviour
 		{
 			itemUseText.text = "* You throw the spaghetti stick at Greater Dog.\n* It looks content and can be SPARED.";
 			canBeSpared = true;
+			
+			yield return new WaitForSeconds(5f);
 		}
 		else
 		{
 			itemUseText.text = "* Incorrect code.";
+			
+			yield return new WaitForSeconds(3f);
 		}
 		
-		yield return new WaitForSeconds(5f);
 		itemUseText.gameObject.SetActive(false);
 		EnemyTurn();
 	}
