@@ -4422,54 +4422,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 75508817, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
-      propertyPath: m_fontColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 75508817, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
-      propertyPath: m_fontColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 75508817, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
-      propertyPath: m_fontColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 75508817, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4278190080
-      objectReference: {fileID: 0}
-    - target: {fileID: 1128841881764747254, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
-      propertyPath: m_text
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1128841881764747254, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
-      propertyPath: m_fontSize
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 1128841881764747254, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 94e709b1def19e84fbc106d66fbc2ef4, type: 2}
-    - target: {fileID: 1128841881764747254, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 1128841881764747254, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 5495050538379814102, guid: 94e709b1def19e84fbc106d66fbc2ef4, type: 2}
-    - target: {fileID: 1128841881764747254, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
-      propertyPath: m_wordWrappingRatios
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1128841881764747254, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2216844936479381612, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6723532212490265985, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
       propertyPath: m_RootOrder
       value: 4
