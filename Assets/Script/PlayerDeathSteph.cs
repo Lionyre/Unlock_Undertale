@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDeathSteph : MonoBehaviour
 {
-    [SerializeField] private PlayerPMove _player;
+    private PlayerPMove _player;
 
     private void Start()
     {
