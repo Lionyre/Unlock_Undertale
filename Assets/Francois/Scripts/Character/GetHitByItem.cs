@@ -45,7 +45,11 @@ public class GetHitByItem : MonoBehaviour
 
     private void ClignoteStp()
     {
-        if(IsHit == true && Clignotte == false)
+        if(gameObject.GetComponent<Health>().CurrentHealth <= 0)
+        {
+            ColorImage.a = 1f;
+        }
+        else if(IsHit == true && Clignotte == false)
         {
             ColorImage.a = 1f;
         }
@@ -62,7 +66,7 @@ public class GetHitByItem : MonoBehaviour
 
     IEnumerator TempsClignotement()
     {
-        while(true)
+        while(true && gameObject.GetComponent<Health>().CurrentHealth > 0)
         {
             Clignotte = false;
             yield return new WaitForSeconds(0.1f);

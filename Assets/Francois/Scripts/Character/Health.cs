@@ -64,7 +64,9 @@ public class Health : MonoBehaviour
     IEnumerator YouDead()
     {
         AnnonceMort.SetActive(true);
-        gameObject.GetComponent<SpriteRenderer>().sprite = null;
+        gameObject.GetComponent<MovingWithButton>().enabled = false;
+        gameObject.GetComponent<Animator>().enabled = true;
+        gameObject.GetComponent<Animator>().Play("CharacterDeath");
         yield return new WaitForSeconds(5);
         Scene scene = SceneManager.GetActiveScene(); 
         SceneManager.LoadScene(scene.name);
