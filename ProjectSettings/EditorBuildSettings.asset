@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Machine Papyrus.unity
     guid: b6f3a99f34987054ea41e4a8a61ea3b5
+  - enabled: 1
+    path: Assets/Scenes/InterfaceFrancois.unity
+    guid: 3868ce734376c964b9bd3e617e443788
   m_configObjects: {}
