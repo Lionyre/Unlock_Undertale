@@ -11,12 +11,25 @@ public class EnterNumber : MonoBehaviour
 
     [SerializeField] private int _characterNumber = 0;
 
+    [SerializeField] private int _inputFieldValue;
+
+    [SerializeField] private Indice[] _clues;
+
+    [SerializeField] private GameObject _viewClues;
+    [SerializeField] private GameObject _viewPad;
+
+    public Indice selectedClue = null;
+
+
+
     public void EnterValue(int number)
     {
         if(_characterNumber < 4)
         {
             _characterNumber += 1;
             _inputField.GetComponent<TMP_InputField>().text += "" + number;
+
+            _inputFieldValue = int.Parse(_inputField.GetComponent<TMP_InputField>().text);
         }
     }
 
@@ -26,19 +39,28 @@ public class EnterNumber : MonoBehaviour
         _characterNumber = 0;
     }
 
-    public void SetValue()
+    public void SetValueForClue()
     {
-        if(_characterNumber == 4)
+
+        for (int i = 0; i < _clues.Length; i++)
         {
-            int i = int.Parse(_inputField.GetComponent<TMP_InputField>().text);
-            Debug.Log(i);
+            if (_inputFieldValue == _clues[i]._CardID)
+            {
+                selectedClue = _clues[i];
+            }
         }
-        else
+
+        if(selectedClue != null)
         {
-            Debug.Log("Il vous manque des chiffre");
+            _viewClues.SetActive(true);
+            _viewPad.SetActive(false);
         }
     }
 
+    public void QuitPad()
+    {
+        this.gameObject.SetActive(false);
+    }
 
 
 }

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2440532ec3d5784fb40ac172e64513c, type: 3}
-  m_Name: 54
+  m_Name: 42
   m_EditorClassIdentifier: 
-  _cardNumber: 
-  _firstClue: 
-  _secondClue: 
-  _thirdClue: 
+  _cardID: 42
+  _firstClue: drfg
+  _secondClue: ergerqg
+  _thirdClue: 'ryreqgerqgqregqe '
   isUsed: 0

@@ -11,8 +11,9 @@ public class EnterNumberForClue : MonoBehaviour
 
     [SerializeField] private int _characterNumber = 0;
 
+    [SerializeField] private int _inputFieldValue;
+
     [SerializeField] private Indice[] _clues;
-    private List<Indice> _clus;
 
     public void EnterValue(int number)
     {
@@ -31,22 +32,33 @@ public class EnterNumberForClue : MonoBehaviour
 
     public void SetValue()
     {
-        if(_characterNumber == 2)
+        int cardExsite = 0;
+
+        for (int i = 0; i < _clues.Length; i++)
         {
-            int i = int.Parse(_inputField.GetComponent<TMP_InputField>().text);
-            Debug.Log(i);
+            Debug.Log(_inputFieldValue + " = " + _clues[i]._CardID + " ?");
+
+            if (_inputFieldValue == _clues[i]._CardID)
+            {
+                cardExsite += 1;
+            }
+            else
+            {
+                cardExsite += 0;
+            }
+        }
+
+        if (cardExsite == 1)
+        {
+            Debug.Log("Voici l'incide");
+        }
+        else if(cardExsite > 1)
+        {
+            Debug.Log("Deux indices ont la meme cardID");
         }
         else
         {
-            Debug.Log("Il vous manque des chiffre");
-        }
-
-        for(int i = 0; i < _clues.Length; i++)
-        {
-            
+            Debug.Log("Cette carte n'existe pas, ou aucun indice n'a été trouvé");
         }
     }
-
-
-
 }
