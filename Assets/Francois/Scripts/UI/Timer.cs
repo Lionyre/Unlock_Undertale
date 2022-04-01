@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Timer : MonoBehaviour
     public bool timerIsRunning = false;
     public TMP_Text TimerText;
     public bool TimerIsActive;
+    public Toggle ToggleChrono;
 
     private void Start()
     {
@@ -38,6 +40,15 @@ public class Timer : MonoBehaviour
                 timeRemaining = 0;
                 timerIsRunning = false;
             }
+        }
+
+        if(ToggleChrono.isOn == true)
+        {
+            TimerIsActive = true;
+        }
+        else if(ToggleChrono.isOn == false)
+        {
+            TimerIsActive = false;
         }
     }
 

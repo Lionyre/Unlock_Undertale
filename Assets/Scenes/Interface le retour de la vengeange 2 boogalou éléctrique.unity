@@ -2996,7 +2996,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &888816965
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4268,7 +4268,8 @@ MonoBehaviour:
   timeRemaining: 2700.5
   timerIsRunning: 1
   TimerText: {fileID: 1526761168}
-  TimerIsActive: 0
+  TimerIsActive: 1
+  ToggleChrono: {fileID: 419130928}
 --- !u!1 &1533967418
 GameObject:
   m_ObjectHideFlags: 0
