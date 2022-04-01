@@ -17,6 +17,6 @@ public class ManISureLoveShibaInu : MonoBehaviour
 	
 	void Update()
 	{
-		transform.position += dir.normalized * 0.02f;
+		transform.position += dir.normalized * Time.deltaTime * 2;
 	}
 }
