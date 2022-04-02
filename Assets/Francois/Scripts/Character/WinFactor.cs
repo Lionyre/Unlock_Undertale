@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class WinFactor : MonoBehaviour
 {
@@ -30,6 +31,9 @@ public class WinFactor : MonoBehaviour
         Time.timeScale = 0;
         FadeOut.SetActive(true);
         yield return new WaitForSecondsRealtime(1.5f);
-        SceneManager.LoadScene("InterfaceFrancois");
+        Time.timeScale = 1;
+        GameObject.Find("CanvasMenu").GetComponent<Canvas>().enabled = true;
+        SceneManager.UnloadSceneAsync("FrancoisMinigame");
+        //SceneManager.LoadScene("InterfaceFrancois");
     }
 }
