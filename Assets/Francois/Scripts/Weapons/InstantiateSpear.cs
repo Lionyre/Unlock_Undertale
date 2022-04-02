@@ -21,10 +21,10 @@ public class InstantiateSpear : MonoBehaviour
     IEnumerator SpawnLance()
     {
         TimerSpawn = 5f;
-        Instantiate(SpearPrefab, new Vector3(Random.Range(-3.5f,3.5f), Random.Range(1.5f,3.85f), 0f), Quaternion.identity);
+        Instantiate(SpearPrefab, new Vector3(Random.Range(-3.5f,3.5f), Random.Range(1.5f,3.85f), 0f), Quaternion.identity,this.gameObject.transform);
          yield return new WaitForSeconds(0.6f);
-        Instantiate(SpearPrefab, new Vector3(Random.Range(-3.5f,3.5f), Random.Range(1.5f,3.85f), 0f), Quaternion.identity);
+        Instantiate(SpearPrefab, new Vector3(Random.Range(-3.5f,3.5f), Random.Range(1.5f,3.85f), 0f), Quaternion.identity,this.gameObject.transform);
         yield return new WaitForSeconds(0.6f);
-        Instantiate(SpearPrefab, new Vector3(Random.Range(-3.5f,3.5f), Random.Range(1.5f,3.85f), 0f), Quaternion.identity);
+        Instantiate(SpearPrefab, new Vector3(Random.Range(-3.5f,3.5f), Random.Range(1.5f,3.85f), 0f), Quaternion.identity,this.gameObject.transform);
     }
 }
