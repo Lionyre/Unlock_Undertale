@@ -68,10 +68,8 @@ public class GetHitByItem : MonoBehaviour
     {
         while(true && HealthPlayer.CurrentHealth > 0)
         {
-            Debug.Log("DetecteLancer");
             Clignotte = false;
             yield return new WaitForSeconds(0.1f);
-            Debug.Log("DetecteLancer2");
             Clignotte = true;
             yield return new WaitForSeconds(0.1f);
         }
