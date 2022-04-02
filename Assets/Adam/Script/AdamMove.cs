@@ -37,9 +37,12 @@ public class AdamMove : MonoBehaviour
 
     //----------------------------------------------------//
 
+    [Header("End Game")]
 
+    public GameObject _endLosePanel = null;
+    public GameObject _endWinPanel = null;
 
-    private void Start()
+    private void Awake()
     {
         _clickCounter.maxValue = 1;
         _clickCounter.value = .01f;
@@ -74,21 +77,19 @@ public class AdamMove : MonoBehaviour
             StartCoroutine(StartGame());
             Debug.Log("Test");
         }
-
-
     }
 
     public void SnailEndGame()
     {
-        if(_clickCounter.value > _maxValue || _enemyWin == true)
+        if(_enemyWin == true)
         {
-            Debug.Log("Game is losed");
+            _endLosePanel.SetActive(true);
             _canClick = false;
         }
-
-        if(_isEnded == true)
+        else if(_isEnded == true)
         {
-            // Take Next Card
+            _endWinPanel.SetActive(true);
+            _canClick = false;
         }
     }
 
