@@ -269,5 +269,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: UndyneGame
       objectReference: {fileID: 0}
+    - target: {fileID: 7131402183146880806, guid: 685d5e0176d0b544e82010f764b9e707, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7131402183146880806, guid: 685d5e0176d0b544e82010f764b9e707, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7131402183146880806, guid: 685d5e0176d0b544e82010f764b9e707, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 685d5e0176d0b544e82010f764b9e707, type: 3}

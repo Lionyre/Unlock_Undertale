@@ -25,7 +25,7 @@ public class BoxChangement : MonoBehaviour
         Dialogue.SetActive(true);
         yield return new WaitForSeconds(5);
         Dialogue.SetActive(false);
-        Instantiate(PrefabSpear);
+        Instantiate(PrefabSpear, gameObject.transform);
         yield return new WaitForSeconds(30);
         Destroy(this.gameObject);
     }
