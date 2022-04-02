@@ -66,10 +66,12 @@ public class GetHitByItem : MonoBehaviour
 
     IEnumerator TempsClignotement()
     {
-        while(true && gameObject.GetComponent<Health>().CurrentHealth > 0)
+        while(true && HealthPlayer.CurrentHealth > 0)
         {
+            Debug.Log("DetecteLancer");
             Clignotte = false;
             yield return new WaitForSeconds(0.1f);
+            Debug.Log("DetecteLancer2");
             Clignotte = true;
             yield return new WaitForSeconds(0.1f);
         }
