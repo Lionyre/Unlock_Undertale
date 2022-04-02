@@ -21,7 +21,7 @@ public class PlayerPMove : MonoBehaviour
         _changeForms = GameObject.FindObjectsOfType<ChangeForm>();
         //_changeForms1 = GameObject.FindObjectsOfType<ChangeForm1>();
 
-        _speed = _speed * Time.deltaTime;
+        //_speed = _speed * Time.deltaTime;
 
 
 
@@ -30,7 +30,6 @@ public class PlayerPMove : MonoBehaviour
     void Update()
     {
         StayGlace();
-
     }
 
     public void StayGlace()
@@ -50,7 +49,6 @@ public class PlayerPMove : MonoBehaviour
         if (GetBool.IsOnClickUp == true)
         {
             _movement.y = _speed;
-            Debug.LogWarning("UP");
         }
         else if (GetBool.IsOnClickDown == true)
         {
@@ -58,7 +56,7 @@ public class PlayerPMove : MonoBehaviour
         }
         else if (GetBool.IsOnClickLeft == true)
         {
-            _movement.x = - _speed;
+            _movement.x = -_speed;
         }
         else if (GetBool.IsOnClickRight == true)
         {
