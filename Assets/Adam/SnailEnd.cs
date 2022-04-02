@@ -9,16 +9,14 @@ public class SnailEnd : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("End");
-
-        if (collision.gameObject.name == "EnemySnail")
+        if (collision.gameObject.name == "TriggersSnail")
         {
-            Debug.Log("End");
+            Debug.Log("enemy Win");
             _adamMove._enemyWin = true;
         }
-        else if (collision.gameObject.name == "Player")
+        else if (collision.gameObject.name == "TriggersPlayer")
         {
-            Debug.Log("End");
+            Debug.Log("player Win");
             _adamMove._isEnded = true;
         }
     }
