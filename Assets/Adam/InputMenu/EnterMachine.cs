@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
-public class EnterCodeMachine : MonoBehaviour
+public class EnterMachine : MonoBehaviour
 {
-
     [SerializeField] private GameObject _inputField;
 
     [SerializeField] private int _characterNumber = 0;
@@ -15,11 +15,11 @@ public class EnterCodeMachine : MonoBehaviour
 
     [SerializeField] private int[] card;
 
-    [SerializeField] private GameObject[] window;
+    [SerializeField] private string[] scenes;
     [SerializeField] private GameObject _viewPad;
 
     public int selectedCard;
-    public GameObject selectedWindow;
+    public string selectedScene;
 
 
 
@@ -48,21 +48,20 @@ public class EnterCodeMachine : MonoBehaviour
             if (_inputFieldValue == card[i])
             {
                 selectedCard = card[i];
-                selectedWindow = window[i];
+                selectedScene = scenes[i];
             }
         }
 
         if(selectedCard != 0)
         {
-            selectedWindow.SetActive(true);
+            SceneManager.LoadScene(selectedScene, LoadSceneMode.Additive);
+            GameObject.Find("CanvasMenu").GetComponent<Canvas>().enabled = false;
             _viewPad.SetActive(false);
         }
     }
 
     public void QuitPad()
     {
-        this.gameObject.SetActive(false);
+        _viewPad.SetActive(false);
     }
-
-
 }
