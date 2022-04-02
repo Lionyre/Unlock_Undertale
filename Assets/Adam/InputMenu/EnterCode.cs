@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class EnterNumber : MonoBehaviour
+public class EnterCode : MonoBehaviour
 {
 
     [SerializeField] private GameObject _inputField;
@@ -13,12 +13,13 @@ public class EnterNumber : MonoBehaviour
 
     [SerializeField] private int _inputFieldValue;
 
-    [SerializeField] private Indice[] _clues;
+    [SerializeField] private int[] card;
 
-    [SerializeField] private GameObject _viewClues;
+    [SerializeField] private GameObject[] window;
     [SerializeField] private GameObject _viewPad;
 
-    public Indice selectedClue = null;
+    public int selectedCard;
+    public GameObject selectedWindow;
 
 
 
@@ -39,20 +40,21 @@ public class EnterNumber : MonoBehaviour
         _characterNumber = 0;
     }
 
-    public void SetValueForClue()
+    public void SetValue()
     {
 
-        for (int i = 0; i < _clues.Length; i++)
+        for (int i = 0; i < card.Length; i++)
         {
-            if (_inputFieldValue == _clues[i]._CardID)
+            if (_inputFieldValue == card[i])
             {
-                selectedClue = _clues[i];
+                selectedCard = card[i];
+                selectedWindow = window[i];
             }
         }
 
-        if(selectedClue != null)
+        if(selectedCard != 0)
         {
-            _viewClues.SetActive(true);
+            selectedWindow.SetActive(true);
             _viewPad.SetActive(false);
         }
     }

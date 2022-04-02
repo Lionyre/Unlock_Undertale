@@ -12,8 +12,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Machine Papyrus.unity
     guid: b6f3a99f34987054ea41e4a8a61ea3b5
   - enabled: 1
+    path: Assets/Scenes/Gaming.unity
+    guid: fe98be147794c274eab2e723cb161271
+  - enabled: 1
     path: Assets/Adam/Adam.unity
     guid: eb82db78aa83d204ea8ca16eff26a632
+  - enabled: 1
+    path: Assets/Scenes/FrancoisMinigame.unity
+    guid: e986cbdef852dda4b8888b6594d98cf8
+  - enabled: 1
+    path: Assets/Scenes/Dalles de couleurs.unity
+    guid: baba40cd9a3bbb848a7e34e9b3ddd351
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
