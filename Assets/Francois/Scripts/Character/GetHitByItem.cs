@@ -39,7 +39,7 @@ public class GetHitByItem : MonoBehaviour
         ClignoteStp();
     }
 
-    private void Start() {
+    private void Awake() {
         StartCoroutine(TempsClignotement());
     }
 
