@@ -62,63 +62,19 @@ public class BattlePatterns : MonoBehaviour
 		}
 	}
 	
-	
-	
-	
-	
-	// IEnumerator SpearSwipes()
-	// {
-		// timerSpawn = 10f;
-		// Instantiate(spearSwipe, new Vector3(4f, -1f, 0f), Quaternion.identity);
-		// yield return new WaitForSeconds(3f);
-		// Instantiate(spearSwipe, new Vector3(-4f, -1f, 0f), Quaternion.identity);
-		// yield return new WaitForSeconds(3f);
-		// Instantiate(spearSpin, new Vector3(4f, -1f, 0f), Quaternion.identity);
-	// }
-	
-	// void SpearSmash()
-	// {
-		// timerSpawn = 2.6f;
-		// Instantiate(spearSmash, new Vector3(Random.Range(-1.33f, 1.33f), 2.5f, 0f), Quaternion.identity);
-	// }
-	
-	// void Dog()
-	// {
-		// if(spawnedDog)
-		// {
-			// timerSpawn = 0.4f;
-			
-			// if(barksLeft <= 0)
-			// {
-				// barksLeft = Random.Range(1, 5);
-			// }
-			// else
-			// {
-				// barksLeft--;
-				// Instantiate(bark, new Vector3(0f, -2.3f, 0f), Quaternion.identity);
-			// }
-		// }
-		// else
-		// {	
-			// spawnedDog = true;
-			// GameObject doggo = Instantiate(dog, new Vector3(0f, -2.3f, 0f), Quaternion.identity);
-			// Destroy(doggo, 10);
-		// }
-	// }
-	
 	IEnumerator SpearSwipes()
 	{
-		timerSpawn = 4f;
+		timerSpawn = 10f;
 		Instantiate(spearSwipe, new Vector3(4f, -1f, 0f), Quaternion.identity);
-		yield return new WaitForSeconds(1.5f);
+		yield return new WaitForSeconds(3f);
 		Instantiate(spearSwipe, new Vector3(-4f, -1f, 0f), Quaternion.identity);
-		yield return new WaitForSeconds(1f);
+		yield return new WaitForSeconds(3f);
 		Instantiate(spearSpin, new Vector3(4f, -1f, 0f), Quaternion.identity);
 	}
 	
 	void SpearSmash()
 	{
-		timerSpawn = 0.5f;
+		timerSpawn = 2.5f;
 		Instantiate(spearSmash, new Vector3(Random.Range(-1.33f, 1.33f), 2.5f, 0f), Quaternion.identity);
 	}
 	
@@ -126,11 +82,11 @@ public class BattlePatterns : MonoBehaviour
 	{
 		if(spawnedDog)
 		{
-			timerSpawn = 0.25f;
+			timerSpawn = 0.4f;
 			
 			if(barksLeft <= 0)
 			{
-				barksLeft = Random.Range(1, 7);
+				barksLeft = Random.Range(1, 5);
 			}
 			else
 			{
