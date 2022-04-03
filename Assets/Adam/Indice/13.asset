@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2440532ec3d5784fb40ac172e64513c, type: 3}
-  m_Name: 52
+  m_Name: 13
   m_EditorClassIdentifier: 
-  _cardID: 52
-  _firstClue: 
-  _secondClue: 
-  _thirdClue: 
+  _cardID: 13
+  _firstClue: "Vous ne pouvez pas juste le manger comme \xE7a"
+  _secondClue: Dans quoi met on du jambon
+  _thirdClue: Fais un sandwich
   isUsed: 0
