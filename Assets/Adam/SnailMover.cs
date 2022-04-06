@@ -6,6 +6,7 @@ public class SnailMover : MonoBehaviour
 {
 
     [SerializeField] AdamMove _adamMove;
+    [SerializeField] Animator _animator;
 
     private float _speed;
     public float _minSpeed = 0.4f;
@@ -26,6 +27,9 @@ public class SnailMover : MonoBehaviour
         if(_adamMove._isStarted == true && _adamMove._canClick == true)
         {
             _speed = Random.Range(_minSpeed, _maxSpeed);
+            _animator.SetBool("Start", true);
+
+            _animator.speed = 1 + _speed / 10;
 
             yield return new WaitForSeconds(Random.Range(0, 10));
         }
