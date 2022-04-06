@@ -47,11 +47,31 @@ public class ChangeForm : MonoBehaviour
             }
             else if (_stat == Stat.Triangle)
             {
-                
-                i = Random.Range(0,_sprite.Length - 1);
+                int newI = Random.Range(0, _sprite.Length);
+
+
+
+                if (i != newI)
+                {
+                    this.gameObject.GetComponent<SpriteRenderer>().sprite = _sprite[i];
+
+                }
+
+                if (i == newI)
+                {
+                    if (newI == _sprite.Length) // Lenght longueur du tableau;
+                    {
+                        i = newI - 1;
+                    }
+                    else
+                    {
+                        i = newI + 1;
+                    }
+                }
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = _sprite[i];
 
-                this.gameObject.GetComponent<SpriteRenderer>().color = new Vector4(Random.Range(0,255), Random.Range(0,255),Random.Range(0,255),255);
+
+                this.gameObject.GetComponent<SpriteRenderer>().color = new Color(Random.Range(0, 1f), Random.Range(0, 1f), Random.Range(0, 1f), 1f);
             }
         }
 
