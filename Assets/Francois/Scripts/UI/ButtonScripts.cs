@@ -10,6 +10,10 @@ public class ButtonScripts : MonoBehaviour
     [SerializeField] private Button Penaliter;
     [SerializeField] private Button Paramètre;
     [SerializeField] private Button LeaveParameter;
+    [SerializeField] private GameObject code;
+    [SerializeField] private GameObject indice;
+    [SerializeField] private GameObject machine;
+
     public GameObject ParamètreContainer;
 
 
@@ -76,5 +80,17 @@ public class ButtonScripts : MonoBehaviour
     void LeaveParametre()
     {
          ParamètreContainer.SetActive(false);
+    }
+    public void codes()
+    {
+        code.SetActive(true);
+    }
+    public void machines()
+    {
+        machine.SetActive(true);
+    }
+    public void indices()
+    {
+        indice.SetActive(true);
     }
 }

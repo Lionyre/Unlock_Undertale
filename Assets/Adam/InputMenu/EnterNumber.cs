@@ -59,7 +59,7 @@ public class EnterNumber : MonoBehaviour
 
     public void QuitPad()
     {
-        this.gameObject.SetActive(false);
+        _viewPad.SetActive(false);
     }
 
 

@@ -69,8 +69,9 @@ public class SpearSmash : MonoBehaviour
 			}
 			
 			GetComponent<Collider2D>().enabled = false;
+			_animator.enabled = true;
 			_animator.Play("disaspear_ptdr");
-			Destroy(gameObject, 2f);
+			Destroy(gameObject, 1f);
 		}
 	}
 }

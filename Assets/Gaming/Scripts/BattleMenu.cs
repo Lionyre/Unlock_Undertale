@@ -21,7 +21,7 @@ public class BattleMenu : MonoBehaviour
 	public GameObject fightMenu;
 	public GameObject itemMenu;
 	public GameObject mercyMenu;
-	public GameObject battleMenu;
+	public Canvas battleMenu;
 	public GameObject wonMenu;
 	
 	public GameObject textBox;
@@ -115,7 +115,7 @@ public class BattleMenu : MonoBehaviour
 		battleBox.SetActive(true);
 		fightMenu.SetActive(false);
 		mercyMenu.SetActive(false);
-		battleMenu.SetActive(true);
+		battleMenu.enabled = true;
 		
 		StartCoroutine(ObjectiveSurvive());
 	}
@@ -126,7 +126,7 @@ public class BattleMenu : MonoBehaviour
 		
 		battleBox.SetActive(false);
 		textBox.SetActive(true);
-		battleMenu.SetActive(false);
+		battleMenu.enabled = false;
 		mainMenu.SetActive(true);
 		StopAllCoroutines();
 	}

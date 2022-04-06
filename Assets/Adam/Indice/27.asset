@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2440532ec3d5784fb40ac172e64513c, type: 3}
-  m_Name: 42
+  m_Name: 27
   m_EditorClassIdentifier: 
-  _cardID: 42
-  _firstClue: drfg
-  _secondClue: ergerqg
-  _thirdClue: 'ryreqgerqgqregqe '
+  _cardID: 27
+  _firstClue: "Vraiment vous ne savez pas comment d\xE9verrouiller une porte..."
+  _secondClue: "S\xE9rieusement on parle de juste d\xE9verrouiller une porte\u2026"
+  _thirdClue: "Tu m'obliges vraiment \xE0 te dire de d\xE9verrouiller une porte avec
+    des cl\xE9s\u2026"
   isUsed: 0

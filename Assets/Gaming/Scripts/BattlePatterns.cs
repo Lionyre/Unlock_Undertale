@@ -62,10 +62,6 @@ public class BattlePatterns : MonoBehaviour
 		}
 	}
 	
-	
-	
-	
-	
 	IEnumerator SpearSwipes()
 	{
 		timerSpawn = 10f;
@@ -78,7 +74,7 @@ public class BattlePatterns : MonoBehaviour
 	
 	void SpearSmash()
 	{
-		timerSpawn = 2.6f;
+		timerSpawn = 2.5f;
 		Instantiate(spearSmash, new Vector3(Random.Range(-1.33f, 1.33f), 2.5f, 0f), Quaternion.identity);
 	}
 	
@@ -90,7 +86,7 @@ public class BattlePatterns : MonoBehaviour
 			
 			if(barksLeft <= 0)
 			{
-				barksLeft = Random.Range(0, 4);
+				barksLeft = Random.Range(1, 5);
 			}
 			else
 			{
