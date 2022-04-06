@@ -39,7 +39,7 @@ public class GetHitByItem : MonoBehaviour
         ClignoteStp();
     }
 
-    private void Start() {
+    private void Awake() {
         StartCoroutine(TempsClignotement());
     }
 
@@ -66,7 +66,7 @@ public class GetHitByItem : MonoBehaviour
 
     IEnumerator TempsClignotement()
     {
-        while(true && gameObject.GetComponent<Health>().CurrentHealth > 0)
+        while(true && HealthPlayer.CurrentHealth > 0)
         {
             Clignotte = false;
             yield return new WaitForSeconds(0.1f);

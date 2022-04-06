@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Adam/Script/UiButton.cs.meta
-guid: b5e680a61b57cd9459184a23af8447ed
-=======
-guid: a77a85d6f20c5ca43877f881254b75ca
->>>>>>> main:Assets/Francois/Scripts/UI/ClickChronometre.cs.meta
+guid: 42bd2a26f802f694dba95a7dc6758f4a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
