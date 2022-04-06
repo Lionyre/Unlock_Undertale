@@ -7816,6 +7816,10 @@ PrefabInstance:
       propertyPath: _clues.Array.data[29]
       value: 
       objectReference: {fileID: 11400000, guid: 9603b110fd0188548afe0138b2438654, type: 2}
+    - target: {fileID: 1128841881764747254, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2216844936479381612, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
       propertyPath: m_IsActive
       value: 0
