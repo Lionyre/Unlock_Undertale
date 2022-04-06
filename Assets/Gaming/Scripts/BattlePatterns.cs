@@ -82,7 +82,7 @@ public class BattlePatterns : MonoBehaviour
 	{
 		if(spawnedDog)
 		{
-			timerSpawn = 0.4f;
+			timerSpawn = 0.45f;
 			
 			if(barksLeft <= 0)
 			{
@@ -91,13 +91,13 @@ public class BattlePatterns : MonoBehaviour
 			else
 			{
 				barksLeft--;
-				Instantiate(bark, new Vector3(0f, -2.3f, 0f), Quaternion.identity);
+				Instantiate(bark, new Vector3(0f, -2.2f, 0f), Quaternion.identity);
 			}
 		}
 		else
 		{	
 			spawnedDog = true;
-			GameObject doggo = Instantiate(dog, new Vector3(0f, -2.3f, 0f), Quaternion.identity);
+			GameObject doggo = Instantiate(dog, new Vector3(0f, -2.2f, 0f), Quaternion.identity);
 			Destroy(doggo, 10);
 		}
 	}

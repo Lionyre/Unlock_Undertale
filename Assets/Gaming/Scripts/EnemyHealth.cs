@@ -25,22 +25,6 @@ public class EnemyHealth : MonoBehaviour
 		slider.value = maxHealth;
 	}
 	
-	void Update()
-	{
-		if(Input.GetKeyDown(KeyCode.A))
-		{
-			StartCoroutine(TakeDamage(1));
-		}
-		else if(Input.GetKeyDown(KeyCode.N))
-		{
-			StartCoroutine(TakeDamage(0.8f));
-		}
-		else if(Input.GetKeyDown(KeyCode.M))
-		{
-			StartCoroutine(TakeDamage(0.2f));
-		}
-	}
-	
 	public IEnumerator TakeDamage(float hitAccuracy)
 	{
 		yield return new WaitForSeconds(0.5f);
