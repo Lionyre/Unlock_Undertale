@@ -16,10 +16,14 @@ public class EnterMachine : MonoBehaviour
     [SerializeField] private int[] card;
 
     [SerializeField] private string[] scenes;
+    [SerializeField] private bool[] finished;
+    [SerializeField] private string[] winMomentos;
     [SerializeField] private GameObject _viewPad;
 
     public int selectedCard;
     public string selectedScene;
+    public bool selectedFinish;
+    public TMP_Text selectedMomentos;
 
 
 
@@ -45,10 +49,12 @@ public class EnterMachine : MonoBehaviour
 
         for (int i = 0; i < card.Length; i++)
         {
-            if (_inputFieldValue == card[i])
+            if (_inputFieldValue == card[i] && finished[i] == false)
             {
                 selectedCard = card[i];
                 selectedScene = scenes[i];
+                selectedMomentos.text = winMomentos[i];
+                selectedFinish = finished[i];
             }
         }
 
