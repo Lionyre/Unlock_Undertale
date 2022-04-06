@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: "Assets/Scenes/Interface le retour de la vengeange 2 boogalou \xE9l\xE9ctrique.unity"
+    guid: 27ec56d9c1ee34d4394fc5f6635ac9d6
+  - enabled: 0
     path: Assets/Scenes/InterfaceFrancois.unity
     guid: 3868ce734376c964b9bd3e617e443788
   - enabled: 1

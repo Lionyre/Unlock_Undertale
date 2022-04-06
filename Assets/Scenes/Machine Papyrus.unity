@@ -1304,7 +1304,7 @@ GameObject:
   - component: {fileID: 671135612}
   - component: {fileID: 671135611}
   m_Layer: 0
-  m_Name: STEPHGame1
+  m_Name: PapyrusGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
