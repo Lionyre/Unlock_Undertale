@@ -49,7 +49,7 @@ public class EnterMachine : MonoBehaviour
 
         for (int i = 0; i < card.Length; i++)
         {
-            if (_inputFieldValue == card[i] && finished[i] == false)
+            if (_inputFieldValue == card[i])
             {
                 selectedCard = card[i];
                 selectedScene = scenes[i];
@@ -58,7 +58,7 @@ public class EnterMachine : MonoBehaviour
             }
         }
 
-        if(selectedCard != 0)
+        if(selectedCard != 0 && finished[selection] == false)
         {
             SceneManager.LoadScene(selectedScene, LoadSceneMode.Additive);
             GameObject.Find("CanvasMenu").GetComponent<Canvas>().enabled = false;
