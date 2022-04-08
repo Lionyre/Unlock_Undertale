@@ -53,19 +53,25 @@ public class PlayerPMove : MonoBehaviour
         if (GetBool.IsOnClickUp == true)
         {
             _movement.y = _speed;
-            _animator.SetTrigger("Gauche");
+            _animator.SetTrigger("haut");
         }
         else if (GetBool.IsOnClickDown == true)
         {
             _movement.y = -_speed;
+            _animator.SetTrigger("bas");
+
         }
         else if (GetBool.IsOnClickLeft == true)
         {
             _movement.x = -_speed;
+            _animator.SetTrigger("gauche");
+
         }
         else if (GetBool.IsOnClickRight == true)
         {
             _movement.x = _speed;
+            _animator.SetTrigger("droit");
+
         }
         else
         {
