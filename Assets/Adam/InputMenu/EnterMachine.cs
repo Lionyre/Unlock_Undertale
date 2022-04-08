@@ -16,7 +16,7 @@ public class EnterMachine : MonoBehaviour
     [SerializeField] private int[] card;
 
     [SerializeField] private string[] scenes;
-    [SerializeField] private bool[] finished;
+    [SerializeField] public bool[] finished;
     [SerializeField] private string[] winMomentos;
     [SerializeField] private GameObject _viewPad;
 
