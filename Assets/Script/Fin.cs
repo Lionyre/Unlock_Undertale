@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Fin : MonoBehaviour
 {
     public GameObject lemon;
-    public GameObject effects;
     [SerializeField] private Player player = null;
     private EnterMachine Machine;
 
@@ -22,10 +22,10 @@ public class Fin : MonoBehaviour
         if (other.gameObject.layer == 0 && player.stopAll == false)
         {
             lemon.SetActive(false);
-            effects.SetActive(false);
             player.stopAll = true;
             Machine.finished[Machine.selection] = true;
             Machine.Victiore.SetActive(true);
+            SceneManager.UnloadSceneAsync("Dalles de couleurs");
         }
     }
 }
