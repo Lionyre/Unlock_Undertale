@@ -23,6 +23,7 @@ public class EnterMachine : MonoBehaviour
     public int selectedCard;
     public string selectedScene;
     public TMP_Text selectedMomentos;
+    public int selection;
 
 
 
@@ -53,6 +54,7 @@ public class EnterMachine : MonoBehaviour
                 selectedCard = card[i];
                 selectedScene = scenes[i];
                 selectedMomentos.text = winMomentos[i];
+                selection = i;
             }
         }
 
