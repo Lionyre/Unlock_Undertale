@@ -869,7 +869,8 @@ MonoBehaviour:
   - 
   - 
   - "Bravo vous avez \xE9chapp\xE9 \xE0 Undyne, prenez la carte 39"
-  - 
+  - "Vous avez passer le Puzzle Tr\xE8s Compliqu\xE9 de Mettaton\u2122, prenez la
+    carte 19"
   _viewPad: {fileID: 596809803}
   Victiore: {fileID: 1739964642}
   selectedCard: 0
