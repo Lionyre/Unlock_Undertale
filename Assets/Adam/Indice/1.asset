@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2440532ec3d5784fb40ac172e64513c, type: 3}
+  m_Name: 1
+  m_EditorClassIdentifier: 
+  _cardID: 1
+  _firstClue: "Est-ce que cette encoche est en forme d'\xE9p\xE9e ?"
+  _secondClue: Ne vous attardez pas trop dessus
+  _thirdClue: Attends la fin tu verras quoi faire
+  isUsed: 0

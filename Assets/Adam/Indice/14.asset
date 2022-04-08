@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2440532ec3d5784fb40ac172e64513c, type: 3}
+  m_Name: 14
+  m_EditorClassIdentifier: 
+  _cardID: 14
+  _firstClue: "Quel autre endroit vous a emplit de d\xE9termination d\xE9j\xE0 ?"
+  _secondClue: "N'\xE9tait ce pas apr\xE8s avoir rencontr\xE9 cette fleure"
+  _thirdClue: Utilises le sur la sauvegarde
+  isUsed: 0

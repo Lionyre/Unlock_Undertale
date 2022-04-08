@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2440532ec3d5784fb40ac172e64513c, type: 3}
-  m_Name: 92
+  m_Name: 2
   m_EditorClassIdentifier: 
-  _cardID: 92
-  _firstClue: 
-  _secondClue: 
-  _thirdClue: 
+  _cardID: 2
+  _firstClue: "Avez-vous quelque chose \xE0 vendre ? Ou bien de quoi acheter ?"
+  _secondClue: 'Temmie aime beaucoup les chiens '
+  _thirdClue: "Donnes lui le r\xE9sidu de chien ou l'argent"
   isUsed: 0

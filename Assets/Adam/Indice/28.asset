@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2440532ec3d5784fb40ac172e64513c, type: 3}
+  m_Name: 28
+  m_EditorClassIdentifier: 
+  _cardID: 28
+  _firstClue: "Pourquoi se battre quand on est bien prot\xE9g\xE9"
+  _secondClue: "Ca pourait vous aider \xE0 vous enfuir si quelqu'un vous attaque"
+  _thirdClue: "Prot\xE8ge toi de Undyne avec l'armure"
+  isUsed: 0
