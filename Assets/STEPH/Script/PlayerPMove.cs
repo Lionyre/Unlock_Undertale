@@ -16,6 +16,10 @@ public class PlayerPMove : MonoBehaviour
 
     public bool _canMove;
 
+    // Animation
+
+    public Animator _animator;
+
     private void Start()
     {
         _changeForms = GameObject.FindObjectsOfType<ChangeForm>();
@@ -49,6 +53,7 @@ public class PlayerPMove : MonoBehaviour
         if (GetBool.IsOnClickUp == true)
         {
             _movement.y = _speed;
+            _animator.SetTrigger("Gauche");
         }
         else if (GetBool.IsOnClickDown == true)
         {

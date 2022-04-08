@@ -1664,6 +1664,7 @@ MonoBehaviour:
   _movement: {x: 0, y: 0}
   _currentMovement: {x: 0, y: 0}
   _canMove: 0
+  _animator: {fileID: 1437105401}
 --- !u!212 &715449906
 SpriteRenderer:
   m_ObjectHideFlags: 0
