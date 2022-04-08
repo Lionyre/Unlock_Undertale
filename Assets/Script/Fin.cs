@@ -25,6 +25,7 @@ public class Fin : MonoBehaviour
             player.stopAll = true;
             Machine.finished[Machine.selection] = true;
             Machine.Victiore.SetActive(true);
+            GameObject.Find("CanvasMenu").GetComponent<Canvas>().enabled = true;
             SceneManager.UnloadSceneAsync("Dalles de couleurs");
         }
     }
