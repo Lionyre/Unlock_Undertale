@@ -34,6 +34,7 @@ public class WinFactor : MonoBehaviour
         Time.timeScale = 1;
         GameObject.Find("CanvasMenu").GetComponent<Canvas>().enabled = true;
         Machine.finished[Machine.selection] = true;
+        Machine.Victiore.SetActive(true);
         SceneManager.UnloadSceneAsync("FrancoisMinigame");
         //SceneManager.LoadScene("InterfaceFrancois");
     }
