@@ -868,13 +868,14 @@ MonoBehaviour:
   - 
   - 
   - 
-  - 
+  - "Bravo vous avez \xE9chapp\xE9 \xE0 Undyne, prenez la carte 39"
   - 
   _viewPad: {fileID: 596809803}
+  Victiore: {fileID: 1739964642}
   selectedCard: 0
   selectedScene: 
-  selectedFinish: 0
   selectedMomentos: {fileID: 1842995654}
+  selection: 0
 --- !u!1 &254243290
 GameObject:
   m_ObjectHideFlags: 0

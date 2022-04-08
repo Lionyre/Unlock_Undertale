@@ -19,6 +19,7 @@ public class EnterMachine : MonoBehaviour
     [SerializeField] public bool[] finished;
     [SerializeField] private string[] winMomentos;
     [SerializeField] private GameObject _viewPad;
+    [SerializeField] public GameObject Victiore;
 
     public int selectedCard;
     public string selectedScene;
@@ -64,6 +65,8 @@ public class EnterMachine : MonoBehaviour
             GameObject.Find("CanvasMenu").GetComponent<Canvas>().enabled = false;
             _viewPad.SetActive(false);
         }
+        else if(finished[selection] == false)
+            Victiore.SetActive(true);
     }
 
     public void QuitPad()
