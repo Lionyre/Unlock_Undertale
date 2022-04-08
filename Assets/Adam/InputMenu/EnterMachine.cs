@@ -65,7 +65,7 @@ public class EnterMachine : MonoBehaviour
             GameObject.Find("CanvasMenu").GetComponent<Canvas>().enabled = false;
             _viewPad.SetActive(false);
         }
-        else if(finished[selection] == false)
+        else if(finished[selection] == true)
             Victiore.SetActive(true);
     }
 
