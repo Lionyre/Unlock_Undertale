@@ -2756,7 +2756,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '* Use which item?'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 835800108e4f68f4f982e4e9d66cb6dc, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2820,7 +2820,7 @@ MonoBehaviour:
   m_margin: {x: -248.11578, y: -50.93255, z: -240.3641, w: 32.514774}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &539913053
@@ -2969,7 +2969,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '* Spare'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 94e709b1def19e84fbc106d66fbc2ef4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 835800108e4f68f4f982e4e9d66cb6dc, type: 2}
   m_sharedMaterial: {fileID: 5495050538379814102, guid: 94e709b1def19e84fbc106d66fbc2ef4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3033,7 +3033,7 @@ MonoBehaviour:
   m_margin: {x: -248.11578, y: -8.251124, z: 36.416656, w: -6.154867}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &572040483
@@ -3334,8 +3334,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '* uh oh spaghettios'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 835800108e4f68f4f982e4e9d66cb6dc, type: 2}
+  m_sharedMaterial: {fileID: -591251267991076215, guid: 835800108e4f68f4f982e4e9d66cb6dc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6613,7 +6613,7 @@ Animator:
   m_GameObject: {fileID: 1341292967}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8cc513816dcce734a8671e9a2cf8aebd, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7ce2d997f89acc7458817d26ed0238a2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -13160,7 +13160,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '* Flee'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 94e709b1def19e84fbc106d66fbc2ef4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 835800108e4f68f4f982e4e9d66cb6dc, type: 2}
   m_sharedMaterial: {fileID: 5495050538379814102, guid: 94e709b1def19e84fbc106d66fbc2ef4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -13224,7 +13224,7 @@ MonoBehaviour:
   m_margin: {x: -248.11578, y: -8.251124, z: 36.416656, w: -6.154867}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1615063401
