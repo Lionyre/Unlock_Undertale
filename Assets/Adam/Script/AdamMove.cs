@@ -47,6 +47,7 @@ public class AdamMove : MonoBehaviour
         _clickCounter.maxValue = 1;
         _clickCounter.value = .01f;
         _canClick = false;
+        Time.timeScale = 1f;
     }
     private void Update()
     {
@@ -69,6 +70,8 @@ public class AdamMove : MonoBehaviour
     {
         if (_isStarted == true)
         {
+            _snailAnimator.SetTrigger("Start");
+
             if (_canClick == true) { clickPerSecond++; _supportAnimator.speed = _clickCounter.value * 5; _snailAnimator.speed = _clickCounter.value; }
             if (_canClick == true && _clickCounter.value > _maxValue) _canClick = false;
         }
@@ -96,7 +99,6 @@ public class AdamMove : MonoBehaviour
     IEnumerator StartGame()
     {
         _supportAnimator.SetTrigger("Start");
-        _snailAnimator.SetTrigger("Start");
         yield return new WaitForSeconds(4f);
         _canClick = true;
     }
