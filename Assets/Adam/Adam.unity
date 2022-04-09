@@ -1210,13 +1210,13 @@ MonoBehaviour:
       - m_Target: {fileID: 1547853502}
         m_TargetAssemblyTypeName: UiButton, Assembly-CSharp
         m_MethodName: QuitGame
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Adam
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &255490649
@@ -4085,13 +4085,13 @@ MonoBehaviour:
       - m_Target: {fileID: 1547853502}
         m_TargetAssemblyTypeName: UiButton, Assembly-CSharp
         m_MethodName: RestartGame
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Adam
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1047302885

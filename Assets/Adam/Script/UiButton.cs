@@ -5,13 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class UiButton : MonoBehaviour
 {
-    public void QuitGame()
+    public void QuitGame(string name)
     {
-        SceneManager.LoadScene(0);
+        SceneManager.UnloadSceneAsync(name);
     }
 
-    public void RestartGame()
+    public void RestartGame(string name)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.UnloadSceneAsync(name);
+        SceneManager.LoadScene(name);
     }
 }
