@@ -40,11 +40,20 @@ public class PlayerPMove : MonoBehaviour
     {
         _rb.velocity = _currentMovement;
 
+
         if (_canMove)
         {
             _currentMovement = _movement;
             MovePlayer();
             Deplacement();
+            _animator.speed = 1f;
+
+
+        }
+        else
+        {
+            _animator.speed = 0f;
+            
         }
     }
 
@@ -89,13 +98,17 @@ public class PlayerPMove : MonoBehaviour
         if (_movement.x != 0)
         {
             _movement.y = 0;
+            _animator.speed = 0f;
+            Debug.Log("Glace");
         }
 
         if (_movement.y != 0)
         {
             _movement.x = 0;
+            _animator.speed = 0f;
+
         }
 
-        
+
     }
 }
