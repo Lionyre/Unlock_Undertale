@@ -7,14 +7,21 @@ public class WaterHazard : MonoBehaviour
     [SerializeField] private Player player = null;
     [SerializeField] private Animator thunder;
     [SerializeField] private Animator fish;
+    private AudioSource gloubzzzt;
     private Animator direction;
     public bool water;
     // public GameObject thunder;
     // public GameObject fish;
 
+    private void Awake() 
+    {
+        gloubzzzt = transform.GetComponentInParent<AudioSource>();
+    }
+
     private void OnTriggerStay2D(Collider2D other) {
         if (other.gameObject.layer == 0 && other.gameObject.name == "Player")
         {
+            gloubzzzt.Play();
             if(water == true)
             {
                 fish.Play("Poisson");

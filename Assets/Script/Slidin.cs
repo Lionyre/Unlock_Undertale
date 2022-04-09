@@ -5,13 +5,19 @@ using UnityEngine;
 public class Slidin : MonoBehaviour
 {
     [SerializeField] private Player player = null;
+    private AudioSource taste;
     private Animator direction;
+    private void Awake() 
+    {
+        taste = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter2D(Collider2D other) {
         
         if (other.gameObject.layer == 0 && other.gameObject.name == "Player")
         {
             other.gameObject.GetComponent<Move>().avancement -= 1;
+            taste.Play();
             player.orange = false;
             // player.stopAll = true;
         }
