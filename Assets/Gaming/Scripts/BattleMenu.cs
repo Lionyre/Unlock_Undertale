@@ -247,6 +247,7 @@ public class BattleMenu : MonoBehaviour
 			text.text = "* You won!/\n* You earned 0 EXP and 0 gold.";
 		}
 		
+		text.gameObject.GetComponent<DialogueScriptEpico>().useFinSound = true;
 		text.gameObject.GetComponent<DialogueScriptEpico>().Awakent();
 		
 		enterMachine.finished[enterMachine.selection] = true;

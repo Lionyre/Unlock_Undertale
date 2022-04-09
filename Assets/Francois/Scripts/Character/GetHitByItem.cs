@@ -8,6 +8,7 @@ public class GetHitByItem : MonoBehaviour
     private bool IsHit;
     public Color ColorImage;
     private bool Clignotte;
+	private AudioSource hurtSound;
 
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -16,12 +17,13 @@ public class GetHitByItem : MonoBehaviour
             if(IsHit == false)
             {
                 HealthPlayer.CurrentHealth -= 5;
+				hurtSound.Play();
             }
             StartCoroutine(CoolDownHit());
         }
         else if(other.gameObject.tag == "LanceMur")
         {
-            HealthPlayer.CurrentHealth = 0;
+            HealthPlayer.CurrentHealth = -99;
         }
     }
 
@@ -40,6 +42,7 @@ public class GetHitByItem : MonoBehaviour
     }
 
     private void Awake() {
+		hurtSound = GetComponent<AudioSource>();
         StartCoroutine(TempsClignotement());
     }
 
