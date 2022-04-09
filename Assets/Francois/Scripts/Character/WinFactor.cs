@@ -7,10 +7,10 @@ using UnityEngine.UI;
 public class WinFactor : MonoBehaviour
 {
     public GameObject FadeOut;
+    public EnterMachine Machine;
     // Start is called before the first frame update
-    void Start()
-    {
-        
+    private void Awake() {
+        Machine = GameObject.Find("EnterMachine").GetComponent<EnterMachine>();
     }
 
     // Update is called once per frame
@@ -33,6 +33,8 @@ public class WinFactor : MonoBehaviour
         yield return new WaitForSecondsRealtime(1.5f);
         Time.timeScale = 1;
         GameObject.Find("CanvasMenu").GetComponent<Canvas>().enabled = true;
+        Machine.finished[Machine.selection] = true;
+        Machine.Victiore.SetActive(true);
         SceneManager.UnloadSceneAsync("FrancoisMinigame");
         //SceneManager.LoadScene("InterfaceFrancois");
     }
