@@ -67,6 +67,8 @@ public class EnterMachine : MonoBehaviour
         }
         else if(finished[selection] == true)
             Victiore.SetActive(true);
+
+        DeleteText();
     }
 
     public void QuitPad()

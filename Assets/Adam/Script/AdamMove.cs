@@ -73,9 +73,9 @@ public class AdamMove : MonoBehaviour
     {
         if (_isStarted == true)
         {
-            _snailAnimator.SetTrigger("Start");
+            
 
-            if (_canClick == true) { clickPerSecond++; _supportAnimator.speed = _clickCounter.value * 5; _snailAnimator.speed = _clickCounter.value; }
+            if (_canClick == true) { clickPerSecond++; _supportAnimator.speed = _clickCounter.value * 5; _snailAnimator.speed = _clickCounter.value; _snailAnimator.SetTrigger("Start"); }
             if (_canClick == true && _clickCounter.value > _maxValue) _canClick = false;
         }
         else
@@ -94,7 +94,14 @@ public class AdamMove : MonoBehaviour
         }
         else if(_isEnded == true && _enemyWin == false)
         {
-            _endWinPanel.SetActive(true);
+            //_endWinPanel.SetActive(true);
+
+            _enterMachine.finished[_enterMachine.selection] = true;
+            _enterMachine.Victiore.SetActive(true);
+
+            SceneManager.UnloadSceneAsync("Adam");
+            GameObject.Find("CanvasMenu").GetComponent<Canvas>().enabled = true;
+
             _canClick = false;
         }
     }
