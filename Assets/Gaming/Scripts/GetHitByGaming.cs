@@ -7,10 +7,12 @@ public class GetHitByGaming : MonoBehaviour
     [SerializeField] private Health healthPlayer;
     private bool isHit;
 	private Animator animator;
+	private AudioSource hurtSound;
 	
 	void Awake()
 	{
 		animator = gameObject.GetComponent<Animator>();
+		hurtSound = GetComponent<AudioSource>();
 	}
 	
 	void OnDisable()
@@ -25,6 +27,7 @@ public class GetHitByGaming : MonoBehaviour
         if(other.gameObject.tag == "Danger" && !isHit)
         {
 			healthPlayer.CurrentHealth -= 5;
+			hurtSound.Play();
 			StartCoroutine(CoolDownHit());
         }
     }
