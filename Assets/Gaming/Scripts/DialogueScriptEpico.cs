@@ -8,6 +8,15 @@ public class DialogueScriptEpico : MonoBehaviour
 {
     private TMP_Text dialogueText;
     public float typingSpeed;
+	public bool useFinSound = false;
+	private AudioSource typingSound;
+	private AudioSource finTypingSound;
+	
+	void Awake()
+	{
+		typingSound = GetComponent<AudioSource>();
+		finTypingSound = transform.GetChild(0).GetComponent<AudioSource>();
+	}
 
     public void Awakent()
 	{
@@ -29,12 +38,18 @@ public class DialogueScriptEpico : MonoBehaviour
 			{
 				if(letter != ' ')
 				{
-					// typingSound.Play();
+					if(!useFinSound)
+					{
+						typingSound.Play();
+					}
+					else
+					{
+						finTypingSound.Play();
+					}
 				}
 				
 				dialogueText.text += letter;
 				yield return new WaitForSeconds(1 / typingSpeed);
-				// typingSound.Stop();
 			}
         }
     }

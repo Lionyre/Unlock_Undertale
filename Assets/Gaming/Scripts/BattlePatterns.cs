@@ -96,6 +96,7 @@ public class BattlePatterns : MonoBehaviour
 		}
 		else
 		{	
+			timerSpawn = 1f;
 			spawnedDog = true;
 			GameObject doggo = Instantiate(dog, new Vector3(0f, -2.2f, 0f), Quaternion.identity);
 			Destroy(doggo, 10);

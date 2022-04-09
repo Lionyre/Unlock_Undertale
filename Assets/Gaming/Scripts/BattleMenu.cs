@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class BattleMenu : MonoBehaviour
 {
@@ -38,6 +39,15 @@ public class BattleMenu : MonoBehaviour
 	public float barSpeed;
 	public Animator handle;
 	
+	private EnterMachine enterMachine;
+	
+	private AudioSource music;
+	private AudioSource selectAudio;
+	private AudioSource unselectAudio;
+	private AudioSource fightAudio;
+	private AudioSource fleeAudio;
+	private AudioSource winAudio;
+	
 	void Start()
 	{
 		fightButton.onClick.AddListener(Fight);
@@ -52,6 +62,15 @@ public class BattleMenu : MonoBehaviour
 		returnButton.onClick.AddListener(Quit);
 		
 		itemInput.onEndEdit.AddListener(delegate {UseItem(); });
+		
+		//enterMachine = GameObject.Find("EnterMachine").GetComponent<EnterMachine>();
+		
+		music = GetComponent<AudioSource>();
+		selectAudio = transform.GetChild(0).GetComponent<AudioSource>();
+		unselectAudio = transform.GetChild(1).GetComponent<AudioSource>();
+		fightAudio = transform.GetChild(2).GetComponent<AudioSource>();
+		fleeAudio = transform.GetChild(3).GetComponent<AudioSource>();
+		winAudio = transform.GetChild(4).GetComponent<AudioSource>();
 	}
 	
 	void Update()
@@ -73,6 +92,8 @@ public class BattleMenu : MonoBehaviour
 	
 	void Fight()
 	{
+		selectAudio.Play();
+		
 		mainMenu.SetActive(false);
 		fightMenu.SetActive(true);
 		attackButton.enabled = true;
@@ -83,6 +104,8 @@ public class BattleMenu : MonoBehaviour
 	
 	void FightAttack()
 	{
+		fightAudio.Play();
+		
 		attackButton.enabled = false;
 		isAttacking = false;
 		
@@ -136,12 +159,16 @@ public class BattleMenu : MonoBehaviour
 	
 	void Item()
 	{
+		selectAudio.Play();
+		
 		mainMenu.SetActive(false);
 		itemMenu.SetActive(true);
 	}
 	
 	void UseItem()
 	{
+		selectAudio.Play();
+		
 		StartCoroutine(UseItemC());
 	}
 	
@@ -176,6 +203,8 @@ public class BattleMenu : MonoBehaviour
 	
 	void Mercy()
 	{
+		selectAudio.Play();
+		
 		mainMenu.SetActive(false);
 		mercyMenu.SetActive(true);
 		
@@ -201,6 +230,9 @@ public class BattleMenu : MonoBehaviour
 	
 	public void Win(bool genocide)
 	{
+		winAudio.Play();
+		music.Stop();
+		
 		fightMenu.SetActive(false);
 		mercyMenu.SetActive(false);
 		wonMenu.SetActive(true);
@@ -215,11 +247,19 @@ public class BattleMenu : MonoBehaviour
 			text.text = "* You won!/\n* You earned 0 EXP and 0 gold.";
 		}
 		
+		text.gameObject.GetComponent<DialogueScriptEpico>().useFinSound = true;
 		text.gameObject.GetComponent<DialogueScriptEpico>().Awakent();
+		
+		enterMachine.finished[enterMachine.selection] = true;
+		enterMachine.Victiore.SetActive(true); 
+		SceneManager.UnloadSceneAsync("Gaming");
+		GameObject.Find("CanvasMenu").GetComponent<Canvas>().enabled = true;
 	}
 	
 	void Cancel()
 	{
+		unselectAudio.Play();
+		
 		itemMenu.SetActive(false);
 		mercyMenu.SetActive(false);
 		mainMenu.SetActive(true);
@@ -227,6 +267,8 @@ public class BattleMenu : MonoBehaviour
 	
 	void Quit()
 	{
+		fleeAudio.Play();
+		
 		Debug.Log("fleeing...");
 		//go back to main menu
 	}

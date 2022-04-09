@@ -18,11 +18,17 @@ public class EnemyHealth : MonoBehaviour
 	public float baseDamageDecay;
 	public float sliderAnimDuration;
 	
+	private AudioSource hurtSound;
+	private AudioSource dogSound;
+	
 	void Start()
 	{
 		currentHealth = maxHealth;
 		slider.maxValue = maxHealth;
 		slider.value = maxHealth;
+		
+		hurtSound = GetComponent<AudioSource>();
+		dogSound = transform.GetChild(0).GetComponent<AudioSource>();
 	}
 	
 	public IEnumerator TakeDamage(float hitAccuracy)
@@ -43,6 +49,8 @@ public class EnemyHealth : MonoBehaviour
 		
 		textAnimator.Play("text_hit");
 		enemyAnimator.Play("hit");
+		hurtSound.Play();
+		dogSound.Play();
 		
 		float time = 0;
 		

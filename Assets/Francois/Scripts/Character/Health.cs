@@ -48,12 +48,12 @@ public class Health : MonoBehaviour
     {
         if(CurrentHealth <= 0)
         {
-            CurrentHealth = 0;
 			if(usedDT)
 			{
+				CurrentHealth = 0;
 				StartCoroutine(YouDead());
 			}
-			else
+			else if(CurrentHealth > -50)
 			{
 				CurrentHealth = 1;
 				usedDT = true;
