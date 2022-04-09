@@ -9,8 +9,11 @@ public class SpearSpin : MonoBehaviour
 	private bool AnimationIsFinish;
 	private bool moving = true;
 	
+	private AudioSource throwSound;
+	
 	void Awake()
 	{
+		throwSound = GetComponent<AudioSource>();
 		_animator = this.gameObject.GetComponent<Animator>();
 		StartCoroutine(CouroutineLance());
 		
@@ -49,5 +52,6 @@ public class SpearSpin : MonoBehaviour
 		AnimationIsFinish = true;
 		yield return new WaitForSeconds(0.5f);
 		StopRotate = true;
+		throwSound.Play();
 	}
 }

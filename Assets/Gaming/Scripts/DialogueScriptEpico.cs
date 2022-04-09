@@ -8,6 +8,7 @@ public class DialogueScriptEpico : MonoBehaviour
 {
     private TMP_Text dialogueText;
     public float typingSpeed;
+	public AudioScript typingSound;
 
     public void Awakent()
 	{
@@ -29,12 +30,12 @@ public class DialogueScriptEpico : MonoBehaviour
 			{
 				if(letter != ' ')
 				{
-					// typingSound.Play();
+					typingSound.Play();
 				}
 				
 				dialogueText.text += letter;
 				yield return new WaitForSeconds(1 / typingSpeed);
-				// typingSound.Stop();
+				typingSound.Stop();
 			}
         }
     }

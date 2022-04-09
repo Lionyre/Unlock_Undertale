@@ -11,8 +11,11 @@ public class SpearSwipe : MonoBehaviour
 	private bool isRight;
 	private float speed = 0.2f;
 	
+	private AudioSource throwSound;
+	
 	void Awake()
 	{
+		throwSound = GetComponent<AudioSource>();
 		_animator = this.gameObject.GetComponent<Animator>();
 		StartCoroutine(CouroutineLance());
 		
@@ -64,5 +67,6 @@ public class SpearSwipe : MonoBehaviour
 		AnimationIsFinish = true;
 		yield return new WaitForSeconds(0.5f);
 		StopRotate = true;
+		throwSound.Play();
 	}
 }

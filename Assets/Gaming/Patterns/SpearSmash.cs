@@ -14,12 +14,18 @@ public class SpearSmash : MonoBehaviour
 	public GameObject spark;
 	public Transform spearTip;
 	
+	private AudioSource smashSound;
+	private AudioSource throwSound;
+	
 	void Awake()
 	{
 		TargetPlayer = GameObject.Find("Coeur");
 		_animator = this.gameObject.GetComponent<Animator>();
 		StartCoroutine(CouroutineLance());
 		boxBottom = GameObject.Find("BottomSide").GetComponent<Collider2D>();
+		
+		smashSound = transform.GetChild(2).GetComponent<AudioSource>();
+		throwSound = GetComponent<AudioSource>();
     }
 	
 	void FixedUpdate()
@@ -53,6 +59,7 @@ public class SpearSmash : MonoBehaviour
 		AnimationIsFinish = true;
 		yield return new WaitForSeconds(0.5f);
 		StopRotate = true;
+		throwSound.Play();
 	}
 	
 	void OnTriggerEnter2D(Collider2D other)
@@ -60,6 +67,7 @@ public class SpearSmash : MonoBehaviour
 		if(other == boxBottom)
 		{
 			moving = false;
+			smashSound.Play();
 			
 			int sparkCount = Random.Range(4, 10);
 			while(sparkCount >= 1)
