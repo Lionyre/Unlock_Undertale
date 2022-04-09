@@ -27,19 +27,19 @@ public class WaterHazard : MonoBehaviour
             other.gameObject.GetComponent<Move>().avancement = 1;
             direction = other.gameObject.GetComponent<Animator>();
             player.stopAll = true;
-            if(direction.GetCurrentAnimatorStateInfo(0).IsName("up"))
+            if(direction.GetCurrentAnimatorStateInfo(0).IsName("Haut"))
             {
                 player.transform.position -= transform.up * 2 * player.speed *Time.deltaTime;
             }
-            if(direction.GetCurrentAnimatorStateInfo(0).IsName("down"))
+            if(direction.GetCurrentAnimatorStateInfo(0).IsName("Bas"))
             {
                 player.transform.position += transform.up * 2 * player.speed *Time.deltaTime;
             }
-            if(direction.GetCurrentAnimatorStateInfo(0).IsName("right"))
+            if(direction.GetCurrentAnimatorStateInfo(0).IsName("Droit"))
             {
                 player.transform.position -= transform.right * 2 * player.speed *Time.deltaTime;
             }
-            if(direction.GetCurrentAnimatorStateInfo(0).IsName("left"))
+            if(direction.GetCurrentAnimatorStateInfo(0).IsName("Gauche"))
             {
                 player.transform.position += transform.right * 2 * player.speed *Time.deltaTime;
             }

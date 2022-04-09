@@ -529,7 +529,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &81002859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7717,9 +7717,29 @@ PrefabInstance:
       value: -4.5
       objectReference: {fileID: 0}
     - target: {fileID: 5370035010729989488, guid: 67940754d96c0c0429ee98b3ee32420c, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1546029541}
+    - target: {fileID: 5370035010729989488, guid: 67940754d96c0c0429ee98b3ee32420c, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1660438650}
+    - target: {fileID: 5370035010729989488, guid: 67940754d96c0c0429ee98b3ee32420c, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1600012392}
+    - target: {fileID: 5370035010729989488, guid: 67940754d96c0c0429ee98b3ee32420c, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1105446864}
+    - target: {fileID: 5370035010729989488, guid: 67940754d96c0c0429ee98b3ee32420c, type: 3}
       propertyPath: GetBool
       value: 
       objectReference: {fileID: 182107375}
+    - target: {fileID: 5370035010729989488, guid: 67940754d96c0c0429ee98b3ee32420c, type: 3}
+      propertyPath: moveButtons
+      value: 
+      objectReference: {fileID: 182107373}
     - target: {fileID: 5370035010729989489, guid: 67940754d96c0c0429ee98b3ee32420c, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -7738,7 +7758,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5370035010729989489, guid: 67940754d96c0c0429ee98b3ee32420c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5370035010729989489, guid: 67940754d96c0c0429ee98b3ee32420c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7773,6 +7793,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5370035010729989490, guid: 67940754d96c0c0429ee98b3ee32420c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8b485fb67d9d71747b0e0d4ed1e9742f, type: 3}
+    - target: {fileID: 5370035010729989490, guid: 67940754d96c0c0429ee98b3ee32420c, type: 3}
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
@@ -7788,6 +7812,14 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 261111162}
+    - target: {fileID: 5370035010729989495, guid: 67940754d96c0c0429ee98b3ee32420c, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5370035010729989495, guid: 67940754d96c0c0429ee98b3ee32420c, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5370035010729989500, guid: 67940754d96c0c0429ee98b3ee32420c, type: 3}
       propertyPath: m_Name
       value: Player
