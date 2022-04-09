@@ -15,7 +15,7 @@ public class Fin : MonoBehaviour
     private void Awake() 
     {
         Time.timeScale = 1;
-//        Machine = GameObject.Find("EnterMachine").GetComponent<EnterMachine>();
+        Machine = GameObject.Find("EnterMachine").GetComponent<EnterMachine>();
     }
     private void OnTriggerStay2D(Collider2D other) 
     {
