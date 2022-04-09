@@ -41,6 +41,7 @@ public class AdamMove : MonoBehaviour
 
     public GameObject _endLosePanel = null;
     public GameObject _endWinPanel = null;
+    public EnterMachine _enterMachine = null;
 
     private void Awake()
     {
@@ -48,6 +49,8 @@ public class AdamMove : MonoBehaviour
         _clickCounter.value = .01f;
         _canClick = false;
         Time.timeScale = 1f;
+
+        _enterMachine = GameObject.FindObjectOfType<EnterMachine>();
     }
     private void Update()
     {
