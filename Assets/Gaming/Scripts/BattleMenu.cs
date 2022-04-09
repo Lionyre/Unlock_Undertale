@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class BattleMenu : MonoBehaviour
 {
@@ -38,6 +39,8 @@ public class BattleMenu : MonoBehaviour
 	public float barSpeed;
 	public Animator handle;
 	
+	private EnterMachine enterMachine;
+	
 	void Start()
 	{
 		fightButton.onClick.AddListener(Fight);
@@ -52,6 +55,8 @@ public class BattleMenu : MonoBehaviour
 		returnButton.onClick.AddListener(Quit);
 		
 		itemInput.onEndEdit.AddListener(delegate {UseItem(); });
+		
+		enterMachine = GameObject.Find("EnterMachine").GetComponent<EnterMachine>();
 	}
 	
 	void Update()
@@ -216,6 +221,11 @@ public class BattleMenu : MonoBehaviour
 		}
 		
 		text.gameObject.GetComponent<DialogueScriptEpico>().Awakent();
+		
+		enterMachine.finished[enterMachine.selection] = true;
+		enterMachine.Victiore.SetActive(true); 
+		SceneManager.UnloadSceneAsync("Gaming");
+		GameObject.Find("CanvasMenu").GetComponent<Canvas>().enabled = true;
 	}
 	
 	void Cancel()
