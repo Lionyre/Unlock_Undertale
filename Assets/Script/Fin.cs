@@ -1,20 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Fin : MonoBehaviour
 {
-    public GameObject terminado;
     public GameObject lemon;
-    public GameObject effects;
     [SerializeField] private Player player = null;
-    private void OnTriggerStay2D(Collider2D other) {
+    private EnterMachine Machine;
+
+    private void Start() {
+        Time.timeScale = 1;
+    }
+    private void Awake() 
+    {
+        Time.timeScale = 1;
+        Machine = GameObject.Find("EnterMachine").GetComponent<EnterMachine>();
+    }
+    private void OnTriggerStay2D(Collider2D other) 
+    {
         if (other.gameObject.layer == 0 && player.stopAll == false)
         {
-            terminado.SetActive(true);
             lemon.SetActive(false);
-            effects.SetActive(false);
             player.stopAll = true;
+            Machine.finished[Machine.selection] = true;
+            Machine.Victiore.SetActive(true);
+            GameObject.Find("CanvasMenu").GetComponent<Canvas>().enabled = true;
+            SceneManager.UnloadSceneAsync("Dalles de couleurs");
         }
     }
 }

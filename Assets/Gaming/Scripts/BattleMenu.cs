@@ -29,9 +29,8 @@ public class BattleMenu : MonoBehaviour
 	
 	public Slider attackSlider;
 	public TMP_InputField itemInput;
-	public TMP_Text itemUseText;
+	public TMP_Text text;
 	public TMP_Text spareText;
-	public TMP_Text wonText;
 	public EnemyHealth enemyHealth;
 	
 	private bool canBeSpared;
@@ -117,12 +116,16 @@ public class BattleMenu : MonoBehaviour
 		mercyMenu.SetActive(false);
 		battleMenu.enabled = true;
 		
+		enemyHealth.enemyAnimator.Play("idle_battle");
+		
 		StartCoroutine(ObjectiveSurvive());
 	}
 	
 	IEnumerator ObjectiveSurvive()
 	{
 		yield return new WaitForSeconds(10f);
+		
+		enemyHealth.enemyAnimator.Play("idle");
 		
 		battleBox.SetActive(false);
 		textBox.SetActive(true);
@@ -145,23 +148,29 @@ public class BattleMenu : MonoBehaviour
 	IEnumerator UseItemC()
 	{
 		itemMenu.SetActive(false);
-		itemUseText.gameObject.SetActive(true);
+		text.enabled = true;
 		
-		if(itemInput.text == "63") // 11?
+		if(itemInput.text == "63")
 		{
-			itemUseText.text = "* You throw the spaghetti stick at Greater Dog.\n* It looks content and can be SPARED.";
+			text.text = "* You throw the spaghetti stick at Greater Dog./\n* It looks content and can be SPARED.";
 			canBeSpared = true;
+			text.gameObject.GetComponent<DialogueScriptEpico>().Awakent();
+			
+			Debug.Log(text);
+			Debug.Log(text.gameObject);
+			Debug.Log(text.gameObject.GetComponent<DialogueScriptEpico>());
 			
 			yield return new WaitForSeconds(5f);
 		}
 		else
 		{
-			itemUseText.text = "* Incorrect code.";
+			text.text = "* Incorrect code.";
+			text.gameObject.GetComponent<DialogueScriptEpico>().Awakent();
 			
 			yield return new WaitForSeconds(3f);
 		}
 		
-		itemUseText.gameObject.SetActive(false);
+		text.enabled = false;
 		EnemyTurn();
 	}
 	
@@ -195,15 +204,18 @@ public class BattleMenu : MonoBehaviour
 		fightMenu.SetActive(false);
 		mercyMenu.SetActive(false);
 		wonMenu.SetActive(true);
+		text.enabled = true;
 		
 		if(genocide)
 		{
-			wonText.text = "* You won!\n* You earned 80 EXP and 0 gold.";
+			text.text = "* You won!/\n* You earned 80 EXP and 0 gold.";
 		}
 		else
 		{
-			wonText.text = "* You won!\n* You earned 0 EXP and 0 gold.";
+			text.text = "* You won!/\n* You earned 0 EXP and 0 gold.";
 		}
+		
+		text.gameObject.GetComponent<DialogueScriptEpico>().Awakent();
 	}
 	
 	void Cancel()

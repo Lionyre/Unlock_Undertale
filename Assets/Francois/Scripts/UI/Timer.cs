@@ -11,6 +11,7 @@ public class Timer : MonoBehaviour
     public TMP_Text TimerText;
     public bool TimerIsActive;
     public Toggle ToggleChrono;
+    private float LeTemps;
 
     private void Start()
     {

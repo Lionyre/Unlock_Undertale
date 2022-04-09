@@ -16,10 +16,15 @@ public class EnterMachine : MonoBehaviour
     [SerializeField] private int[] card;
 
     [SerializeField] private string[] scenes;
+    [SerializeField] public bool[] finished;
+    [SerializeField] private string[] winMomentos;
     [SerializeField] private GameObject _viewPad;
+    [SerializeField] public GameObject Victiore;
 
     public int selectedCard;
     public string selectedScene;
+    public TMP_Text selectedMomentos;
+    public int selection;
 
 
 
@@ -49,15 +54,21 @@ public class EnterMachine : MonoBehaviour
             {
                 selectedCard = card[i];
                 selectedScene = scenes[i];
+                selectedMomentos.text = winMomentos[i];
+                selection = i;
             }
         }
 
-        if(selectedCard != 0)
+        if(selectedCard != 0 && finished[selection] == false)
         {
             SceneManager.LoadScene(selectedScene, LoadSceneMode.Additive);
             GameObject.Find("CanvasMenu").GetComponent<Canvas>().enabled = false;
             _viewPad.SetActive(false);
         }
+        else if(finished[selection] == true)
+            Victiore.SetActive(true);
+
+        DeleteText();
     }
 
     public void QuitPad()

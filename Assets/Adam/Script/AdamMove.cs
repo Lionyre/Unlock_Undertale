@@ -33,9 +33,7 @@ public class AdamMove : MonoBehaviour
     [Header("Start Game")]
 
     public Animator _supportAnimator = null;
-    public Animation _support = null;
     public Animator _snailAnimator = null;
-    public Animation _snail = null;
 
     //----------------------------------------------------//
 
@@ -43,12 +41,16 @@ public class AdamMove : MonoBehaviour
 
     public GameObject _endLosePanel = null;
     public GameObject _endWinPanel = null;
+    public EnterMachine _enterMachine = null;
 
     private void Awake()
     {
         _clickCounter.maxValue = 1;
         _clickCounter.value = .01f;
         _canClick = false;
+        Time.timeScale = 1f;
+
+        _enterMachine = GameObject.FindObjectOfType<EnterMachine>();
     }
     private void Update()
     {
@@ -71,14 +73,15 @@ public class AdamMove : MonoBehaviour
     {
         if (_isStarted == true)
         {
-            if (_canClick == true) { clickPerSecond++; _supportAnimator.speed = _clickCounter.value * 5; }
+            
+
+            if (_canClick == true) { clickPerSecond++; _supportAnimator.speed = _clickCounter.value * 5; _snailAnimator.speed = _clickCounter.value; _snailAnimator.SetTrigger("Start"); }
             if (_canClick == true && _clickCounter.value > _maxValue) _canClick = false;
         }
         else
         {
             _isStarted = true;
             StartCoroutine(StartGame());
-            Debug.Log("Test");
         }
     }
 
@@ -91,7 +94,14 @@ public class AdamMove : MonoBehaviour
         }
         else if(_isEnded == true && _enemyWin == false)
         {
-            _endWinPanel.SetActive(true);
+            //_endWinPanel.SetActive(true);
+
+            _enterMachine.finished[_enterMachine.selection] = true;
+            _enterMachine.Victiore.SetActive(true);
+
+            SceneManager.UnloadSceneAsync("Adam");
+            GameObject.Find("CanvasMenu").GetComponent<Canvas>().enabled = true;
+
             _canClick = false;
         }
     }
