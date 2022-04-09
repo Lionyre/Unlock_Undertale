@@ -5,21 +5,23 @@ using UnityEngine;
 public class WaterHazard : MonoBehaviour
 {
     [SerializeField] private Player player = null;
+    [SerializeField] private Animator thunder;
+    [SerializeField] private Animator fish;
     private Animator direction;
     public bool water;
-    public GameObject thunder;
-    public GameObject fish;
+    // public GameObject thunder;
+    // public GameObject fish;
 
     private void OnTriggerStay2D(Collider2D other) {
         if (other.gameObject.layer == 0 && other.gameObject.name == "Player")
         {
             if(water == true)
             {
-                fish.SetActive(true);
+                fish.Play("Poisson");
             }
             else
             {
-                thunder.SetActive(true);
+                thunder.Play("Thunder");
             }
 
             other.gameObject.GetComponent<Move>().avancement = 1;
