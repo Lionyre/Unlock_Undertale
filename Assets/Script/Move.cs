@@ -81,14 +81,6 @@ public class Move : MonoBehaviour
         }
         avancement = 0;
         player.stopAll = false;
-        if(player.stopUp == false)
-            up.enabled = true;
-        if(player.stopDown == false)
-            down.enabled = true;
-        if(player.stopLeft == false)
-            left.enabled = true;
-        if(player.stopRight == false)
-            right.enabled = true;
     }
     void BoolHell()
     {
@@ -113,6 +105,17 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(player.stopAll == false)
+        {
+            if(player.stopUp == false)
+                up.enabled = true;
+            if(player.stopDown == false)
+                down.enabled = true;
+            if(player.stopLeft == false)
+                left.enabled = true;
+            if(player.stopRight == false)
+                right.enabled = true;
+        }
         if(Input.GetKey(KeyCode.UpArrow))
         {
             Up();
