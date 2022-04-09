@@ -75,7 +75,7 @@ public class AdamMove : MonoBehaviour
         {
             
 
-            if (_canClick == true) { clickPerSecond++; _supportAnimator.speed = _clickCounter.value * 5; _snailAnimator.speed = _clickCounter.value; _snailAnimator.SetTrigger("Start"); }
+            if (_canClick == true) { clickPerSecond++; _supportAnimator.speed = _clickCounter.value * 5; _snailAnimator.speed = 1 + _clickCounter.value; _snailAnimator.SetTrigger("Start"); }
             if (_canClick == true && _clickCounter.value > _maxValue) _canClick = false;
         }
         else
