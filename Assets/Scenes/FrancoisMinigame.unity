@@ -552,6 +552,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7131402181188482130, guid: 685d5e0176d0b544e82010f764b9e707, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 608eae7b3a2e59948a80348a0a813871, type: 2}
+    - target: {fileID: 7131402181188482130, guid: 685d5e0176d0b544e82010f764b9e707, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6237407794325444361, guid: 608eae7b3a2e59948a80348a0a813871, type: 2}
     - target: {fileID: 7131402181601455551, guid: 685d5e0176d0b544e82010f764b9e707, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -564,6 +572,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7131402182373259923, guid: 685d5e0176d0b544e82010f764b9e707, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 608eae7b3a2e59948a80348a0a813871, type: 2}
+    - target: {fileID: 7131402182373259923, guid: 685d5e0176d0b544e82010f764b9e707, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6237407794325444361, guid: 608eae7b3a2e59948a80348a0a813871, type: 2}
+    - target: {fileID: 7131402182593678541, guid: 685d5e0176d0b544e82010f764b9e707, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 608eae7b3a2e59948a80348a0a813871, type: 2}
+    - target: {fileID: 7131402182593678541, guid: 685d5e0176d0b544e82010f764b9e707, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6237407794325444361, guid: 608eae7b3a2e59948a80348a0a813871, type: 2}
     - target: {fileID: 7131402182799475528, guid: 685d5e0176d0b544e82010f764b9e707, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -612,5 +636,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: UndyneGame
       objectReference: {fileID: 0}
+    - target: {fileID: 7131402183310152289, guid: 685d5e0176d0b544e82010f764b9e707, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 608eae7b3a2e59948a80348a0a813871, type: 2}
+    - target: {fileID: 7131402183310152289, guid: 685d5e0176d0b544e82010f764b9e707, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6237407794325444361, guid: 608eae7b3a2e59948a80348a0a813871, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 685d5e0176d0b544e82010f764b9e707, type: 3}
