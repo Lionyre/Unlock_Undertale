@@ -2248,15 +2248,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Quitter
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 608eae7b3a2e59948a80348a0a813871, type: 2}
+  m_sharedMaterial: {fileID: -6237407794325444361, guid: 608eae7b3a2e59948a80348a0a813871, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2637,6 +2637,10 @@ PrefabInstance:
     - target: {fileID: 198464213672787702, guid: e7d40f37ace033f499617a7fb68b32b2, type: 3}
       propertyPath: ShapeModule.radius.mode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198464213672787702, guid: e7d40f37ace033f499617a7fb68b32b2, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
       objectReference: {fileID: 0}
     - target: {fileID: 198464213672787702, guid: e7d40f37ace033f499617a7fb68b32b2, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
@@ -4261,15 +4265,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: "R\xE9essayer"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 608eae7b3a2e59948a80348a0a813871, type: 2}
+  m_sharedMaterial: {fileID: -6237407794325444361, guid: 608eae7b3a2e59948a80348a0a813871, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6180,6 +6184,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 8219088554615715720}
+  up: {fileID: 0}
+  down: {fileID: 0}
+  left: {fileID: 0}
+  right: {fileID: 0}
   walkn: {fileID: 8219088554615715726}
   GetBool: {fileID: 0}
   avancement: 0
