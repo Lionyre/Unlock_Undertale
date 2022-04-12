@@ -68,6 +68,12 @@ public class Move : MonoBehaviour
             walkn.Play("Droit");
         }
     }
+    public IEnumerator wait()
+    {
+        avancement = 0;
+        yield return new WaitForSeconds(0.6f);
+        player.stopAll = false;
+    }
     private IEnumerator str8movin(Vector3 direcfion)
     {
         while(avancement < 1)
@@ -79,8 +85,7 @@ public class Move : MonoBehaviour
             else
                 avancement += Math.Abs(direcfion.y);
         }
-        avancement = 0;
-        player.stopAll = false;
+        StartCoroutine(wait());
     }
     void BoolHell()
     {

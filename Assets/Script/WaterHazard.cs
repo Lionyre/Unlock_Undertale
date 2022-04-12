@@ -55,7 +55,7 @@ public class WaterHazard : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other) {
         if (other.gameObject.layer == 0 && other.gameObject.name == "Player")
         {
-            player.stopAll = false;
+            StartCoroutine(player.gameObject.GetComponent<Move>().wait());
             this.gameObject.SetActive(false);
         }
     }
