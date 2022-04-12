@@ -8,12 +8,16 @@ public class MoveSpearTowards : MonoBehaviour
     public bool StopRotate;
     private Animator _animator;
     private bool AnimationIsFinish;
+	
+	private AudioSource launchSound;
     
     private void Awake() {
         TargetPlayer = GameObject.Find("Coeur");
         _animator = this.gameObject.GetComponent<Animator>();
         StartCoroutine(CouroutineLance());
         Destroy(this.gameObject, 20);
+		
+		launchSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -47,6 +51,7 @@ public class MoveSpearTowards : MonoBehaviour
         _animator.enabled = false;
         AnimationIsFinish = true;
         yield return new WaitForSeconds(0.5f);
+		launchSound.Play();
         StopRotate = true;
     }
 }
