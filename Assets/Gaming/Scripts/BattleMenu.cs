@@ -232,6 +232,7 @@ public class BattleMenu : MonoBehaviour
 	{
 		winAudio.Play();
 		music.Stop();
+		enemyHealth.enemyAnimator.Play("idle_battle");
 		
 		fightMenu.SetActive(false);
 		mercyMenu.SetActive(false);
