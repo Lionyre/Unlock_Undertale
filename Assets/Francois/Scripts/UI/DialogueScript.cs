@@ -8,9 +8,12 @@ public class DialogueScript : MonoBehaviour
 {
     private TMP_Text dialogueText;
     public float typingDelay;
+	
+	private AudioSource typingSound;
 
     private void Awake() {
         dialogueText = this.gameObject.GetComponent<TMP_Text>();
+		typingSound = GetComponent<AudioSource>();
         StartCoroutine(TypeDialogue(dialogueText.text.ToString()));
     }
 
@@ -22,12 +25,12 @@ public class DialogueScript : MonoBehaviour
         {
             if(letter != ' ')
                 {
-                    // typingSound.Play();
+                    typingSound.Play();
                 }
 
                 dialogueText.text += letter;
                 yield return new WaitForSeconds(1 / typingDelay);
-                // typingSound.Stop();
+                typingSound.Stop();
         }
     }
 }
