@@ -270,7 +270,7 @@ public class BattleMenu : MonoBehaviour
 	{
 		fleeAudio.Play();
 		
-		Debug.Log("fleeing...");
-		//go back to main menu
+		SceneManager.UnloadSceneAsync("Gaming");
+		GameObject.Find("CanvasMenu").GetComponent<Canvas>().enabled = true;
 	}
 }
