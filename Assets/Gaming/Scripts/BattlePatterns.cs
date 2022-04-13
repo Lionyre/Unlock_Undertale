@@ -82,17 +82,9 @@ public class BattlePatterns : MonoBehaviour
 	{
 		if(spawnedDog)
 		{
-			timerSpawn = 0.45f;
+			timerSpawn = Random.Range(0.4f, 1.6f);
 			
-			if(barksLeft <= 0)
-			{
-				barksLeft = Random.Range(1, 5);
-			}
-			else
-			{
-				barksLeft--;
-				Instantiate(bark, new Vector3(0f, -2.2f, 0f), Quaternion.identity);
-			}
+			Instantiate(bark, new Vector3(0f, -2.2f, 0f), Quaternion.identity);
 		}
 		else
 		{	

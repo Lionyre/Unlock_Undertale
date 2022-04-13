@@ -59,11 +59,11 @@ public class BattleMenu : MonoBehaviour
 		fleeButton.onClick.AddListener(Quit);
 		mercyCancelButton.onClick.AddListener(Cancel);
 		itemCancelButton.onClick.AddListener(Cancel);
-		returnButton.onClick.AddListener(Quit);
+		returnButton.onClick.AddListener(Win);
 		
 		itemInput.onEndEdit.AddListener(delegate {UseItem(); });
 		
-		//enterMachine = GameObject.Find("EnterMachine").GetComponent<EnterMachine>();
+		enterMachine = GameObject.Find("EnterMachine").GetComponent<EnterMachine>();
 		
 		music = GetComponent<AudioSource>();
 		selectAudio = transform.GetChild(0).GetComponent<AudioSource>();
@@ -250,11 +250,6 @@ public class BattleMenu : MonoBehaviour
 		
 		text.gameObject.GetComponent<DialogueScriptEpico>().useFinSound = true;
 		text.gameObject.GetComponent<DialogueScriptEpico>().Awakent();
-		
-		enterMachine.finished[enterMachine.selection] = true;
-		enterMachine.Victiore.SetActive(true); 
-		SceneManager.UnloadSceneAsync("Gaming");
-		GameObject.Find("CanvasMenu").GetComponent<Canvas>().enabled = true;
 	}
 	
 	void Cancel()
@@ -266,11 +261,25 @@ public class BattleMenu : MonoBehaviour
 		mainMenu.SetActive(true);
 	}
 	
+	void Win()
+	{
+		GameObject.Find("CanvasMenu").GetComponent<Canvas>().enabled = true;
+		enterMachine.finished[enterMachine.selection] = true;
+		enterMachine.Victiore.SetActive(true); 
+		SceneManager.UnloadSceneAsync("Gaming");
+	}
+	
 	void Quit()
+	{
+		StartCoroutine(QuitCoroutine());
+	}
+	
+	IEnumerator QuitCoroutine()
 	{
 		fleeAudio.Play();
 		
-		SceneManager.UnloadSceneAsync("Gaming");
+		yield return new WaitForSeconds(1f);
 		GameObject.Find("CanvasMenu").GetComponent<Canvas>().enabled = true;
+		SceneManager.UnloadSceneAsync("Gaming");
 	}
 }
