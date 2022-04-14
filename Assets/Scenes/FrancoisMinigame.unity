@@ -696,6 +696,14 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -6237407794325444361, guid: 608eae7b3a2e59948a80348a0a813871, type: 2}
+    - target: {fileID: 7131402181551920579, guid: 685d5e0176d0b544e82010f764b9e707, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 608eae7b3a2e59948a80348a0a813871, type: 2}
+    - target: {fileID: 7131402181551920579, guid: 685d5e0176d0b544e82010f764b9e707, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7131402181601455551, guid: 685d5e0176d0b544e82010f764b9e707, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -771,6 +779,14 @@ PrefabInstance:
     - target: {fileID: 7131402182799475535, guid: 685d5e0176d0b544e82010f764b9e707, type: 3}
       propertyPath: m_Name
       value: UndyneGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 7131402182852351765, guid: 685d5e0176d0b544e82010f764b9e707, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 608eae7b3a2e59948a80348a0a813871, type: 2}
+    - target: {fileID: 7131402182852351765, guid: 685d5e0176d0b544e82010f764b9e707, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7131402183310152289, guid: 685d5e0176d0b544e82010f764b9e707, type: 3}
       propertyPath: m_fontAsset
