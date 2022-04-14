@@ -27,7 +27,7 @@ public class Timer : MonoBehaviour
         }
         else if(TimerIsActive == false)
         {
-            TimerText.text = string.Format("--------");
+            TimerText.text = string.Format("-- : --");
             timerIsRunning = false;
         }
         if (timerIsRunning)
