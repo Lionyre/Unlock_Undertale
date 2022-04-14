@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class Health : MonoBehaviour
+public class DeathButBad : MonoBehaviour
 {
     [SerializeField] private int MaxHealth;
     public int CurrentHealth;
@@ -68,7 +68,7 @@ public class Health : MonoBehaviour
         gameObject.GetComponent<Animator>().enabled = true;
         gameObject.GetComponent<Animator>().Play("CharacterDeath");
         yield return new WaitForSeconds(5);
-        SceneManager.LoadScene("FrancoisMinigame", LoadSceneMode.Additive);
-        SceneManager.UnloadSceneAsync("FrancoisMinigame");
+        SceneManager.LoadScene("Gaming", LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync("Gaming");
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GetHitByGaming : MonoBehaviour
 {
-    [SerializeField] private Health healthPlayer;
+    [SerializeField] private DeathButBad healthPlayer;
     private bool isHit;
 	private Animator animator;
 	private AudioSource hurtSound;

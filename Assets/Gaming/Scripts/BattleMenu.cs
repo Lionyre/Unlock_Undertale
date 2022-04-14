@@ -50,6 +50,7 @@ public class BattleMenu : MonoBehaviour
 	
 	void Start()
 	{
+		Time.timeScale = 1;
 		fightButton.onClick.AddListener(Fight);
 		itemButton.onClick.AddListener(Item);
 		mercyButton.onClick.AddListener(Mercy);

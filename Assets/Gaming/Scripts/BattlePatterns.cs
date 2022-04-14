@@ -45,7 +45,7 @@ public class BattlePatterns : MonoBehaviour
 	{
 		timerSpawn -= Time.deltaTime;
 		
-		if(timerSpawn <= 0 && soul.GetComponent<Health>().CurrentHealth > 0)
+		if(timerSpawn <= 0 && soul.GetComponent<DeathButBad>().CurrentHealth > 0)
 		{	
 			if(pattern == 1)
 			{

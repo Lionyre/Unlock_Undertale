@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class ReloadButton : MonoBehaviour
 {
-    
-
     void Start()
     {
         
@@ -14,8 +12,8 @@ public class ReloadButton : MonoBehaviour
 
     public void ResetScene()
     {
-        SceneManager.LoadScene("Machine Papyrus");
-
+        SceneManager.LoadScene("Machine Papyrus", LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync("Machine Papyrus");
     }
 
 
