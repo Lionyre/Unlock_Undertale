@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cardID: 16
   _firstClue: "Ce mot crois\xE9 semble incomplet"
-  _secondClue: "Il n'y a que certains mots r\xE9\xE9lements dans cas mots crois\xE9s"
-  _thirdClue: "Les mots *ins\xE9rer mots* sont les seuls pr\xE9sents dans les mots
-    crois\xE9s le code est les chiffres devants"
+  _secondClue: "A Snowdin l'ann\xE9e commence en Hiver"
+  _thirdClue: "Les mots des saisons sont les seuls pr\xE9sents dans les mots crois\xE9s
+    le code correspond aux chiffres devants dans l'ordre des saisons"
   isUsed: 0

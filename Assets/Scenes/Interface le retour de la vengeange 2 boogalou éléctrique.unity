@@ -4652,7 +4652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3330682601555937204, guid: 21ade5e79e6920b4fa37a371778ba32e, type: 3}
       propertyPath: card.Array.data[0]
-      value: 6942
+      value: 3960
       objectReference: {fileID: 0}
     - target: {fileID: 3330682601555937204, guid: 21ade5e79e6920b4fa37a371778ba32e, type: 3}
       propertyPath: card.Array.data[1]
