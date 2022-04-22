@@ -5435,11 +5435,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c64d72342270c9347b9260a2bbb2c843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 2
+  timeRemaining: 2700.5
   timerIsRunning: 1
   TimerText: {fileID: 1526761168}
   TimerIsActive: 1
   ToggleChrono: {fileID: 419130928}
+  ExplosionEnd: {fileID: 0}
 --- !u!1 &1533967418
 GameObject:
   m_ObjectHideFlags: 0
