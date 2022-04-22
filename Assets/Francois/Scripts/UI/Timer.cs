@@ -12,6 +12,8 @@ public class Timer : MonoBehaviour
     public bool TimerIsActive;
     public Toggle ToggleChrono;
     private float LeTemps;
+    private bool HavePlaySound;
+    public AudioSource ExplosionEnd;
 
     private void Start()
     {
@@ -36,10 +38,18 @@ public class Timer : MonoBehaviour
             {
                 timeRemaining -= Time.deltaTime;
             }
-            else
+            else if(timeRemaining <= 0)
             {
-                timeRemaining = 0;
-                timerIsRunning = false;
+                if(HavePlaySound == false)
+                {
+                    if(ExplosionEnd != null)
+                    {
+                        ExplosionEnd.Play();
+                    }
+                    HavePlaySound = true;
+                }
+                timeRemaining -= Time.deltaTime;
+                // timerIsRunning = false;
             }
         }
 

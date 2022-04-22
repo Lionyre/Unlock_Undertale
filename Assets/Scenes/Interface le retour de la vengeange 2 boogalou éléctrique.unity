@@ -5323,8 +5323,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.636, y: 0}
-  m_SizeDelta: {x: 260.728, y: 70}
+  m_AnchoredPosition: {x: 35.597, y: 0}
+  m_SizeDelta: {x: 198.81, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1526761168
 MonoBehaviour:
@@ -5373,14 +5373,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 74.1
+  m_fontSize: 58.3
   m_fontSizeBase: 74.1
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 15
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 4
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -5435,7 +5435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c64d72342270c9347b9260a2bbb2c843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 2700.5
+  timeRemaining: 2
   timerIsRunning: 1
   TimerText: {fileID: 1526761168}
   TimerIsActive: 1
