@@ -753,8 +753,8 @@ MonoBehaviour:
   - "Gr\xE2ce a vous, mon escargot a gagn\xE9 la course, prendez les cartes 32 et
     81"
   - "Bravo vous avez \xE9chapp\xE9 \xE0 Undyne, prenez la carte 39"
-  - "Vous avez passer le Puzzle Tr\xE8s Compliqu\xE9 de Mettaton\u2122, prenez la
-    carte 19"
+  - "Vous avez passer le Puzzle Tr\xE8s Compliqu\xE9 de Mettaton\u2122, prenez les
+    cartes 19 et 13"
   _viewPad: {fileID: 596809803}
   Victiore: {fileID: 1739964642}
   selectedCard: 0
@@ -4598,6 +4598,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 512484863560869083, guid: 21ade5e79e6920b4fa37a371778ba32e, type: 3}
+      propertyPath: m_GlobalFontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 608eae7b3a2e59948a80348a0a813871, type: 2}
+    - target: {fileID: 2115030926722249831, guid: 21ade5e79e6920b4fa37a371778ba32e, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 608eae7b3a2e59948a80348a0a813871, type: 2}
+    - target: {fileID: 2115030926722249831, guid: 21ade5e79e6920b4fa37a371778ba32e, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3330682600383386556, guid: 21ade5e79e6920b4fa37a371778ba32e, type: 3}
       propertyPath: m_SizeDelta.x
       value: 100
@@ -5311,8 +5323,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.636, y: 0}
-  m_SizeDelta: {x: 260.728, y: 70}
+  m_AnchoredPosition: {x: 35.597, y: 0}
+  m_SizeDelta: {x: 198.81, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1526761168
 MonoBehaviour:
@@ -5361,14 +5373,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 74.1
+  m_fontSize: 58.3
   m_fontSizeBase: 74.1
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 15
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 4
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -5423,7 +5435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c64d72342270c9347b9260a2bbb2c843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 2700.5
+  timeRemaining: 2
   timerIsRunning: 1
   TimerText: {fileID: 1526761168}
   TimerIsActive: 1
@@ -6552,7 +6564,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: La porte grince et s'ouvre prenez la carte 11
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 608eae7b3a2e59948a80348a0a813871, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -6616,7 +6628,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1842995655
@@ -7374,7 +7386,7 @@ MonoBehaviour:
   m_text: "Vous avez termmin\xE9 avec brio les mots crois\xE9s Sans est impr\xE9ssionn\xE9
     prenez la carte S"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 608eae7b3a2e59948a80348a0a813871, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -7438,7 +7450,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1944736139
@@ -7994,7 +8006,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: La porte grince et s'ouvre prenez la carte 11
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 608eae7b3a2e59948a80348a0a813871, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -8058,7 +8070,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2023951188
@@ -8409,6 +8421,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: EnterMachine, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 2541473837473692436, guid: 621f6c505ec47af4bad01a9cedbb4a69, type: 3}
+      propertyPath: m_GlobalFontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 608eae7b3a2e59948a80348a0a813871, type: 2}
     - target: {fileID: 4011673580055924091, guid: 621f6c505ec47af4bad01a9cedbb4a69, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -8420,6 +8436,14 @@ PrefabInstance:
     - target: {fileID: 4011673580055924091, guid: 621f6c505ec47af4bad01a9cedbb4a69, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: EnterMachine, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4108285433469774760, guid: 621f6c505ec47af4bad01a9cedbb4a69, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 608eae7b3a2e59948a80348a0a813871, type: 2}
+    - target: {fileID: 4108285433469774760, guid: 621f6c505ec47af4bad01a9cedbb4a69, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4419424741232165276, guid: 621f6c505ec47af4bad01a9cedbb4a69, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -8726,6 +8750,18 @@ PrefabInstance:
     - target: {fileID: 2216844936479381612, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964565276323362118, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
+      propertyPath: m_GlobalFontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 608eae7b3a2e59948a80348a0a813871, type: 2}
+    - target: {fileID: 3702784909623420410, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 608eae7b3a2e59948a80348a0a813871, type: 2}
+    - target: {fileID: 3702784909623420410, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6723532211857461587, guid: b1fafede91074b04d8e9587482a089ca, type: 3}
       propertyPath: m_IsActive
